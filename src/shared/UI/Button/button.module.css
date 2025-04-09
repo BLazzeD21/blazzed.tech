@@ -1,0 +1,19 @@
+.button {
+	padding: 15px 20px;
+	background-color: var(--dark-pink-color);
+	color: white;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 20px;
+	line-height: 24px;
+	transition: opacity 0.2s;
+}
+
+.button:hover {
+	opacity: 0.9;
+}
+
+.button:disabled {
+	opacity: 0.5;
+}
