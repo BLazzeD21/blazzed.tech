@@ -1,0 +1,97 @@
+.form {
+	margin: 0 auto;
+	margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	width: 90%;
+	max-width: 1400px;
+	min-height: 540px;
+}
+
+.formBlock {
+	display: grid;
+	align-items: flex-start;
+	gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		"name email"
+		"message message";
+}
+
+.message {
+	grid-area: message;
+}
+
+.formGroup {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 12px;
+}
+
+.label {
+	font-weight: 500;
+	color: var(--white-color);
+}
+
+.input,
+.textarea {
+	font-size: 16px;
+	color: var(--white);
+	padding: 20px;
+	border: 1px solid var(--dark-pink-color);
+	border-radius: 20px;
+	transition: border-color 0.2s;
+}
+
+.textarea {
+	min-height: 150px;
+	resize: vertical;
+}
+
+.input:focus,
+.textarea:focus {
+	outline: none;
+	border-color: var(--dark-pink-color);
+}
+
+.error {
+	border-radius: 20px;
+	color: var(--error-color);
+}
+
+.errorBlock {
+	font-size: 18px;
+	text-align: center;
+	padding: 20px;
+	color: var(--dark-pink-color);
+	background-color: var(--error-color);
+	border-radius: 20px;
+}
+
+.successBlock {
+	font-size: 18px;
+	text-align: center;
+	padding: 20px;
+	color: var(--success-text-color);
+	background-color: var(--success-color);
+	border-radius: 20px;
+}
+
+.reCAPTCHA {
+	margin: 12px auto;
+}
+
+@media screen and (width <= 991px) {
+	.formBlock {
+		display: grid;
+		align-items: flex-start;
+		gap: 20px;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"name"
+			"email"
+			"message";
+	}
+}
