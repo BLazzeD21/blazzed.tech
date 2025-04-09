@@ -54,6 +54,28 @@
 		"title": "我的非商业项目",
 		"soon": "很快"
 	},
+	"Mail": {
+      "label": "邮件表单",
+      "title": "反馈表单"
+	},
+	"MailForm": {
+		"nameLabel": "您的名字",
+      "emailLabel": "电子邮件",
+      "messageLabel": "留言或报价",
+      "requiredField": "此字段为必填项",
+      "minLength": "最少{value}个字符",
+      "maxLength": "最多{value}个字符",
+      "invalidEmail": "无效的电子邮件地址",
+      "captchaError": "请验证reCAPTCHA!",
+      "submitError": "提交时出错",
+      "submitSuccess": "消息发送成功!",
+      "sending": "发送中...",
+      "sendButton": "发送"
+	},
+	"Experience": {
+      "label": "经验",
+      "title": "我的工作经验"
+	},
 	"Footer": {
 		"quote": "生活不息，学无止境，日有所进。",
 		"copyright": "亚历山大·谢克林，{year}。保留所有权利。",

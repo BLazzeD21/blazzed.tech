@@ -54,6 +54,28 @@
 		"title": "Omat kaupalliset projektini",
 		"soon": "pian"
 	},
+	"Mail": {
+      "label": "Lomake",
+      "title": "Palaute-lomake"
+	},
+	"MailForm": {
+		"nameLabel": "Nimesi",
+      "emailLabel": "Sähköposti",
+      "messageLabel": "Viesti tai tarjous",
+      "requiredField": "Tämä kenttä on pakollinen",
+      "minLength": "Vähintään {value} merkkiä",
+      "maxLength": "Enintään {value} merkkiä",
+      "invalidEmail": "Virheellinen sähköpostiosoite",
+      "captchaError": "Vahvista reCAPTCHA!",
+      "submitError": "Lähetyksessä tapahtui virhe",
+      "submitSuccess": "Viesti lähetetty onnistuneesti!",
+      "sending": "Lähetetään...",
+      "sendButton": "Lähetä"
+	},
+	"Experience": {
+      "label": "Kokemus",
+      "title": "Työkokemukseni"
+	},
 	"Footer": {
 		"quote": "Elän, opiskelen ja kehitän itseäni päivä kerrallaan.",
 		"copyright": "Sekerin Alexandr, {year}. Kaikki oikeudet pidätetään.",

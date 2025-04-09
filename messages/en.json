@@ -54,6 +54,28 @@
 		"title": "My non-commercial projects",
 		"soon": "soon"
 	},
+	"Mail": {
+		"label": "Mail form",
+		"title": "Feedback form"
+	},
+	"MailForm": {
+			"nameLabel": "Your name",
+			"emailLabel": "Email",
+			"messageLabel": "Message or offer",
+			"requiredField": "This field is required",
+			"minLength": "Minimum {value} characters",
+			"maxLength": "Maximum {value} characters",
+			"invalidEmail": "Invalid email address",
+			"captchaError": "Please verify the reCAPTCHA!",
+			"submitError": "An error occurred while submitting",
+			"submitSuccess": "Message sent successfully!",
+			"sending": "Sending...",
+			"sendButton": "Send"
+		},
+	"Experience": {
+      "label": "Experience",
+      "title": "My work experience"
+	},
 	"Footer": {
 		"quote": "Living, learning, & leveling up one day at a time.",
 		"copyright": "Sekerin Alexandr, {year}. All Rights Reserved.",

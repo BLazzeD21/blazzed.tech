@@ -54,6 +54,28 @@
 		"title": "Meine nicht-kommerziellen Projekte",
 		"soon": "bald"
 	},
+	"Mail": {
+ "label": "Kontaktformular",
+      "title": "Feedback-Formular"
+	},
+	"MailForm": {
+		"nameLabel": "Ihr Name",
+      "emailLabel": "E-Mail",
+      "messageLabel": "Nachricht oder Angebot",
+      "requiredField": "Dieses Feld ist erforderlich",
+      "minLength": "Mindestens {value} Zeichen",
+      "maxLength": "Maximal {value} Zeichen",
+      "invalidEmail": "Ungültige E-Mail-Adresse",
+      "captchaError": "Bitte bestätigen Sie die reCAPTCHA!",
+      "submitError": "Beim Senden ist ein Fehler aufgetreten",
+      "submitSuccess": "Nachricht erfolgreich gesendet!",
+      "sending": "Wird gesendet...",
+      "sendButton": "Senden"
+	},
+	"Experience": {
+      "label": "Erfahrung",
+      "title": "Meine Berufserfahrung"
+	},
 	"Footer": {
 		"quote": "Leben, lernen und sich jeden Tag verbessern.",
 		"copyright": "Sekerin Alexandr, {year}. Alle Rechte vorbehalten.",

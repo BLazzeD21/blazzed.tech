@@ -54,6 +54,28 @@
 		"title": "Meus projetos não comerciais",
 		"soon": "breve"
 	},
+	"Mail": {
+		"label": "Formulário de contato",
+		"title": "Formulário de feedback"
+	},
+	"MailForm": {
+		"nameLabel": "Seu nome",
+		"emailLabel": "E-mail",
+		"messageLabel": "Mensagem ou oferta",
+		"requiredField": "Este campo é obrigatório",
+		"minLength": "Mínimo {value} caracteres",
+		"maxLength": "Máximo {value} caracteres",
+		"invalidEmail": "Endereço de e-mail inválido",
+		"captchaError": "Por favor verifique o reCAPTCHA!",
+		"submitError": "Ocorreu um erro ao enviar",
+		"submitSuccess": "Mensagem enviada com sucesso!",
+		"sending": "Enviando...",
+		"sendButton": "Enviar"
+	},
+	"Experience": {
+		"label": "Experiência",
+		"title": "Minha experiência profissional"
+	},
 	"Footer": {
 		"quote": "Vivendo, aprendendo e evoluindo um dia de cada vez.",
 		"copyright": "Sekerin Alexandr, {year}. Todos os direitos reservados.",

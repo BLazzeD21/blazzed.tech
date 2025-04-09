@@ -54,6 +54,28 @@
 		"title": "مشاريعي غير التجارية",
 		"soon": "قريباً"
 	},
+	"Mail": {
+      "label": "نموذج البريد",
+      "title": "نموذج الملاحظات"
+	},
+	"MailForm": {
+		"nameLabel": "اسمك",
+		"emailLabel": "البريد الإلكتروني",
+		"messageLabel": "رسالة أو عرض",
+		"requiredField": "هذا الحقل مطلوب",
+		"minLength": "الحد الأدنى {value} حرف",
+		"maxLength": "الحد الأقصى {value} حرف",
+		"invalidEmail": "عنوان بريد إلكتروني غير صالح",
+		"captchaError": "يرجى التحقق من reCAPTCHA!",
+		"submitError": "حدث خطأ أثناء الإرسال",
+		"submitSuccess": "تم إرسال الرسالة بنجاح!",
+		"sending": "جارٍ الإرسال...",
+		"sendButton": "إرسال"
+	},
+	"Experience": {
+      "label": "الخبرة",
+      "title": "خبرتي العملية"
+	},
 	"Footer": {
 		"quote": "أعيش، أتعلم وأتطور يوماً بعد يوم.",
 		"copyright": "ألكسندر سيكيرين، {year}. جميع الحقوق محفوظة.",
