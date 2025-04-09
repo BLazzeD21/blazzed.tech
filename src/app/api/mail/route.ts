@@ -78,7 +78,7 @@ export async function POST(request: Request): Promise<NextResponse> {
 
 		const errorResponse = {
 			success: false,
-			message: "Failed to send message",
+			message: "Failed to send message. Try again later",
 			error: error instanceof Error ? error.message : "Unknown error",
 		};
 

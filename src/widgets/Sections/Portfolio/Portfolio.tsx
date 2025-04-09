@@ -8,7 +8,7 @@ import { PortfolioProps } from "./portfolio.props";
 import { Title } from "@/shared/UI";
 
 import { PortfolioBlock } from "@/widgets/Blocks";
-import { FooterWave, StackWave } from "@/widgets/Waves";
+import { StackWave } from "@/widgets/Waves";
 
 export const Portfolio = ({ portfolioItems }: PortfolioProps): JSX.Element => {
 	const text = useTranslations("Portfolio");
@@ -32,7 +32,6 @@ export const Portfolio = ({ portfolioItems }: PortfolioProps): JSX.Element => {
 					</div>
 				</div>
 			</div>
-			<FooterWave />
 		</section>
 	);
 };

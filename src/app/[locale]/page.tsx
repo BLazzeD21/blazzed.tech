@@ -3,7 +3,9 @@ import { JSX, use } from "react";
 
 import { CustomCursor, PageUp, Sidepanel } from "@/widgets";
 
-import { AboutMe, Education, Footer, Header, Portfolio, Stack } from "@/widgets/Sections";
+import { AboutMe, Education, Experience, Footer, Header, Mail, Portfolio, Stack } from "@/widgets/Sections";
+
+import { LocaleKeys } from "@/types";
 
 import {
 	additionalEducation,
@@ -17,7 +19,7 @@ import {
 } from "@/constants";
 
 type Props = {
-	params: Promise<{ locale: "ru" | "ru" }>;
+	params: Promise<{ locale: LocaleKeys }>;
 };
 
 export default function IndexPage({ params }: Props): JSX.Element {
@@ -34,6 +36,8 @@ export default function IndexPage({ params }: Props): JSX.Element {
 			<Education higherEducation={higherEducation[locale]} additionalEducation={additionalEducation[locale]} />
 			<Stack ratings={ratings[locale]} stack={stack} />
 			<Portfolio portfolioItems={portfolioItems} />
+			<Experience />
+			<Mail locale={locale} />
 			<Footer internalLinks={internalLinks[locale]} socialLinks={socialLinks} />
 			<PageUp />
 		</>

@@ -1,0 +1,8 @@
+.stack {
+	padding-bottom: 5px;
+	background-color: var(--navy-blue-color);
+}
+
+.title {
+	margin: 20px 0;
+}

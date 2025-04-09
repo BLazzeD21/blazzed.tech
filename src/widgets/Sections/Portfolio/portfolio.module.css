@@ -15,6 +15,7 @@
 .wrapper {
 	transition: all 0.66s;
 	margin-top: 60px;
+	margin-bottom: 20px;
 	display: grid;
 	grid-template: repeat(2, 276px) / repeat(4, 276px);
 	grid-template-rows: 280px;

@@ -1,9 +1,14 @@
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-id-pattern */
 :root {
 	--pink-color: #fc85ae;
 	--dark-pink-color: #9e579d;
 	--navy-blue-color: #574b90;
 	--gray-color: #303a52;
 	--white-color: #fff;
+	--error-color: #f8d7da;
+	--success-text-color: #28a745;
+	--success-color: #d4edda;
 	--scrollbar-track-color: #b659b3;
 	--scrollbar-thumb-color: var(--pink-color);
 	--font-quicksand: "Quicksand", sans-serif;
@@ -11,11 +16,16 @@
 }
 
 .quicksand {
-	font-family: var(--font-quicksand);
+	font-family: var(--font-quicksand) !important;
 }
 
 .ruda {
-	font-family: var(--font-ruda);
+	font-family: var(--font-ruda) !important;
+}
+
+textarea,
+input {
+	font-family: var(--font-quicksand) var(--font-ruda);
 }
 
 * {
