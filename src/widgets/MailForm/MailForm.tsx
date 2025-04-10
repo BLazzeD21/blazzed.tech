@@ -2,7 +2,7 @@
 
 import classNames from "classnames";
 import { useTranslations } from "next-intl";
-import { JSX, useRef, useState, useTransition } from "react";
+import { JSX, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
 
@@ -23,7 +23,7 @@ type FormData = {
 export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 	const text = useTranslations("MailForm");
 
-	const [isPending, startTransition] = useTransition();
+	const [isPending, setIsPending] = useState<boolean>(false);
 	const [error, setError] = useState<string | null>(null);
 	const [success, setSuccess] = useState<string | null>(null);
 
@@ -45,45 +45,50 @@ export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 	const onSubmit = (data: FormData): void => {
 		if (recaptcha.current === null) return;
 
+		setIsPending(true);
+		setError(null);
+		setSuccess(null);
+
 		const captchaValue = recaptcha.current.getValue();
 
 		if (!captchaValue) {
 			setError(text("captchaError"));
 			return;
 		}
+		const controller = new AbortController();
+		const timeoutId = setTimeout(() => controller.abort(), 10000);
 
-		startTransition(() => {
-			setError(null);
-			setSuccess(null);
-
-			fetch("/api/mail", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					...data,
-					recaptchaToken: captchaValue,
-				}),
+		fetch("/api/mail", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				...data,
+				recaptchaToken: captchaValue,
+			}),
+			signal: controller.signal,
+		})
+			.then(async (res) => {
+				clearTimeout(timeoutId);
+				const response = await res.json();
+				if (!res.ok) {
+					throw new Error(response.message || text("submitError"));
+				}
+				return response;
 			})
-				.then(async (res) => {
-					const response = await res.json();
-					if (!res.ok) {
-						throw new Error(response.message || text("submitError"));
-					}
-					return response;
-				})
-				.then(() => {
-					setSuccess(text("submitSuccess"));
-					reset();
-				})
-				.catch((err) => {
-					setError(err.message || text("submitError"));
-				})
-				.finally(() => {
-					recaptcha.current?.reset();
-				});
-		});
+			.then(() => {
+				setSuccess(text("submitSuccess"));
+				reset();
+			})
+			.catch((err) => {
+				setError(err.message || text("submitError"));
+			})
+			.finally(() => {
+				clearTimeout(timeoutId);
+				recaptcha.current?.reset();
+				setIsPending(false);
+			});
 	};
 
 	const siteKey = process.env.NEXT_PUBLIC_CAPTCHA_SECRET_KEY;
@@ -168,9 +173,15 @@ export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 					{errors.message && <p className={styles.error}>{errors.message.message}</p>}
 				</div>
 			</div>
-			{siteKey && !success && (
+			{siteKey && (
 				<div className={styles.reCAPTCHA}>
-					<ReCAPTCHA ref={recaptcha} sitekey={siteKey} size={width && width < 340 ? "compact" : "normal"} hl={locale} />
+					<ReCAPTCHA
+						ref={recaptcha}
+						sitekey={siteKey}
+						size={width && width < 340 ? "compact" : "normal"}
+						hl={locale}
+						onExpired={() => recaptcha.current?.reset()}
+					/>
 				</div>
 			)}
 			{!success && (
