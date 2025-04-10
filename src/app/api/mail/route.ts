@@ -24,6 +24,9 @@ function getTransporter(): nodemailer.Transporter {
 			pass: process.env.EMAIL_PASSWORD,
 		},
 		authMethod: "PLAIN",
+		connectionTimeout: 10000,
+		socketTimeout: 10000,
+		greetingTimeout: 5000,
 	});
 
 	return transporter;
