@@ -8,8 +8,10 @@ import { contactFormSchema } from "@/schemes";
 
 let transporter: nodemailer.Transporter;
 
-function getTransporter(): nodemailer.Transporter {
-	if (transporter) return transporter;
+async function getTransporter(): Promise<nodemailer.Transporter> {
+	if (transporter && (await transporter.verify())) {
+		return transporter;
+	}
 
 	if (!process.env.EMAIL_USERNAME || !process.env.EMAIL_PASSWORD) {
 		throw new Error("Email credentials are not configured");
@@ -63,7 +65,7 @@ export async function POST(request: Request): Promise<NextResponse> {
 		}
 
 		const formData = validation.data;
-		const transporter = getTransporter();
+		const transporter = await getTransporter();
 
 		const mailOptions = {
 			from: `"Contact Form" <${process.env.EMAIL_USERNAME}>`,
