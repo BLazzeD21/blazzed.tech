@@ -67,6 +67,11 @@ export const stack: StackType = {
 	],
 	"Frameworks, Platforms and Libraries": [
 		{
+			name: "RHF",
+			imageSrc: "/icons/stack/reacthookform.svg",
+			level: Levels.Basic,
+		},
+		{
 			name: "React",
 			imageSrc: "/icons/stack/react.svg",
 			level: Levels.Advanced,
