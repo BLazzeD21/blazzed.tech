@@ -55,8 +55,6 @@ export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 			setError(text("captchaError"));
 			return;
 		}
-		const controller = new AbortController();
-		const timeoutId = setTimeout(() => controller.abort(), 10000);
 
 		fetch("/api/mail", {
 			method: "POST",
@@ -67,10 +65,8 @@ export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 				...data,
 				recaptchaToken: captchaValue,
 			}),
-			signal: controller.signal,
 		})
 			.then(async (res) => {
-				clearTimeout(timeoutId);
 				const response = await res.json();
 				if (!res.ok) {
 					throw new Error(response.message || text("submitError"));
@@ -85,7 +81,6 @@ export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 				setError(err.message || text("submitError"));
 			})
 			.finally(() => {
-				clearTimeout(timeoutId);
 				recaptcha.current?.reset();
 				setIsPending(false);
 			});
