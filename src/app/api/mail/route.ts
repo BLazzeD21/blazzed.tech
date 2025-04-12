@@ -79,16 +79,17 @@ export async function POST(request: Request): Promise<NextResponse> {
 		await transporter.sendMail(mailOptions);
 
 		return NextResponse.json({ success: true, message: "Message sent successfully" }, { status: 200 });
-	} catch (error) {
-		console.error("Email sending error:", error);
-
+	} catch (error: unknown) {
 		const errorResponse = {
 			success: false,
 			message: "Failed to send message. Try again later",
-			error: error instanceof Error ? error.message : "Unknown error",
+			error: "Unknown error",
 		};
 
 		if (error instanceof Error) {
+			errorResponse.error = error.message;
+			errorResponse.message = error.message;
+
 			if (error.message.includes("Invalid login") || error.message.includes("Authentication failed")) {
 				errorResponse.message = "Server error: Mail authentication failed";
 			} else if (error.message.includes("ENOTFOUND")) {
