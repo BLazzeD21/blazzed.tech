@@ -13,19 +13,18 @@ async function getTransporter(): Promise<nodemailer.Transporter> {
 		return transporter;
 	}
 
-	if (!process.env.EMAIL_USERNAME || !process.env.EMAIL_PASSWORD) {
-		throw new Error("Email credentials are not configured");
+	if (!process.env.SMTP_HOST || !process.env.SMTP_PORT || !process.env.SMTP_USERNAME || !process.env.SMTP_PASSWORD) {
+		throw new Error("SMTP credentials are not configured");
 	}
 
 	transporter = nodemailer.createTransport({
-		host: "smtp.rambler.ru",
-		port: 465,
-		secure: true,
+		host: process.env.SMTP_HOST,
+		port: Number(process.env.SMTP_PORT),
+		secure: false,
 		auth: {
-			user: process.env.EMAIL_USERNAME,
-			pass: process.env.EMAIL_PASSWORD,
+			user: process.env.SMTP_USERNAME,
+			pass: process.env.SMTP_PASSWORD,
 		},
-		authMethod: "PLAIN",
 		connectionTimeout: 10000,
 		socketTimeout: 10000,
 		greetingTimeout: 5000,
@@ -67,9 +66,11 @@ export async function POST(request: Request): Promise<NextResponse> {
 		const formData = validation.data;
 		const transporter = await getTransporter();
 
+		const date = new Date().toISOString();
+
 		const mailOptions = {
-			from: `"Contact Form" <${process.env.EMAIL_USERNAME}>`,
-			to: process.env.EMAIL_USERNAME,
+			from: `"Contact Form ${date}" <${process.env.SMTP_USERNAME}>`,
+			to: process.env.TO_EMAIL_USERNAME,
 			subject: `New message from "${escapeHtml(formData.author)}"`,
 			text: formData.message,
 			html: generateEmailHtml(formData),
