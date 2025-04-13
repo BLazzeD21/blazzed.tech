@@ -17,7 +17,7 @@ export const Mail = ({ locale }: MailProps): JSX.Element => {
 	return (
 		<section className={styles.stack}>
 			<MailWave />
-			<div className="container" id="mail">
+			<div className="container" id="form">
 				<div className="flex">
 					<Title Tag="h3" size="18" darkPinkCircle isCircleCenter>
 						{text("label")}

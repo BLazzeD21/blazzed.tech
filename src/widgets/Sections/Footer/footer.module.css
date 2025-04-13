@@ -56,14 +56,15 @@
 .menu {
 	margin: 0 auto;
 	margin-top: 30px;
-	max-width: 600px;
+	max-width: 550px;
 	width: 100%;
 	perspective: 500px;
 }
 
 .list {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	gap: 12px;
 	flex-wrap: wrap;
 }
 
@@ -126,7 +127,6 @@
 	}
 
 	.list {
-		justify-content: space-around;
 		gap: 10px;
 	}
 }

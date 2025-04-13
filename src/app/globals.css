@@ -58,7 +58,9 @@ canvas {
 
 #education,
 #stack,
-#portfolio {
+#portfolio,
+#form,
+#experience {
 	scroll-margin-top: 40px;
 }
 
