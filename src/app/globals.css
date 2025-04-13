@@ -6,7 +6,7 @@
 	--navy-blue-color: #574b90;
 	--gray-color: #303a52;
 	--white-color: #fff;
-	--error-color: #f8d7da;
+	--error-color: rgb(245 93 106 / 80%); /* #f3747f */
 	--success-text-color: #28a745;
 	--success-color: #d4edda;
 	--scrollbar-track-color: #b659b3;

@@ -57,15 +57,17 @@
 }
 
 .error {
+	background-color: var(--error-color);
+	padding: 5px 12px;
 	border-radius: 20px;
-	color: var(--error-color);
+	color: var(--white-color);
 }
 
 .errorBlock {
 	font-size: 18px;
 	text-align: center;
 	padding: 20px;
-	color: var(--dark-pink-color);
+	color: var(--white-color);
 	background-color: var(--error-color);
 	border-radius: 20px;
 }
