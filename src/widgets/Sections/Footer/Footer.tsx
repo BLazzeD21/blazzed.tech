@@ -49,7 +49,15 @@ export const Footer = ({ socialLinks, internalLinks }: FooterProps): JSX.Element
 							))}
 						</ul>
 					</div>
-					<div className={styles.copyright}>&copy; {text("copyright", { year: year })}</div>
+					<div className={styles.copyright}>
+						&copy; {text("copyright", { year: year })}
+						<br />
+						{text("google")}&nbsp;
+						<Link href="https://policies.google.com/privacy">{text("policy")}</Link>&nbsp;
+						{text("and")}&nbsp;
+						<Link href="https://policies.google.com/terms">{text("terms")}</Link>&nbsp;
+						{text("apply")}
+					</div>
 				</div>
 			</footer>
 		</>

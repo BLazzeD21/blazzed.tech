@@ -79,16 +79,21 @@
 	transition: transform 0.1s;
 }
 
-.menuItem a:hover {
-	transform: scale(1.05);
-}
-
 .copyright {
 	margin-top: 25px;
 	font-weight: 700;
 	text-align: center;
 	color: var(--white-color);
 	font-size: 20px;
+	line-height: 1.3;
+}
+
+.copyright a {
+	color: var(--white-color);
+}
+
+.menuItem a:hover {
+	transform: scale(1.05);
 }
 
 @media screen and (width <= 991px) {

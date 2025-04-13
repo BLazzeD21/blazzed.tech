@@ -82,6 +82,11 @@
 		"contactButton": "Yhteys",
 		"mailButton": "Sähköposti",
 		"mailSubject": "Nimesi - Otsikko",
-		"mailBody": "Tarjouksesi kuvaus"
+		"mailBody": "Tarjouksesi kuvaus",
+    "google": "Tämä sivusto on suojattu reCAPTCHA:lla, ja",
+    "policy": "Googlen tietosuojakäytäntö",
+    "terms": "käyttöehdot",
+    "and": "ja",
+    "apply": "ovat voimassa."
 	}
 }

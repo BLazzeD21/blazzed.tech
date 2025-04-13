@@ -82,6 +82,11 @@
 		"contactButton": "联系我",
 		"mailButton": "电子邮件",
 		"mailSubject": "您的姓名 - 主题",
-		"mailBody": "请描述您的需求"
+		"mailBody": "请描述您的需求",
+    "google": "本网站受 reCAPTCHA 保护，并适用",
+    "policy": "Google 隐私权政策",
+    "terms": "服务条款",
+    "and": "和",
+    "apply": "。"
 	}
 }

@@ -82,6 +82,11 @@
 		"contactButton": "Contact",
 		"mailButton": "E-mail",
 		"mailSubject": "Votre Nom - Objet",
-		"mailBody": "Description de votre proposition"
+		"mailBody": "Description de votre proposition",
+		"google": "Ce site est protégé par reCAPTCHA et",
+    "policy": "la Politique de confidentialité",
+    "terms": "les Conditions d'utilisation",
+    "and": "et",
+    "apply": "de Google s'appliquent."
 	}
 }

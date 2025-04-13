@@ -82,6 +82,11 @@
 		"contactButton": "اتصل",
 		"mailButton": "البريد",
 		"mailSubject": "اسمك - العنوان",
-		"mailBody": "وصف عرضك"
+		"mailBody": "وصف عرضك",
+"google": "هذا الموقع محمي بواسطة reCAPTCHA وتنطبق عليه",
+    "policy": "سياسة الخصوصية",
+    "terms": "شروط خدمة Google",
+    "and": "و",
+    "apply": "."
 	}
 }
