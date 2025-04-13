@@ -3,7 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata, Viewport } from "next";
 import { hasLocale, Locale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Quicksand, Ruda } from "next/font/google";
+import { Nunito, Quicksand } from "next/font/google";
 import { notFound } from "next/navigation";
 import { JSX, ReactNode } from "react";
 
@@ -26,9 +26,9 @@ const quicksand = Quicksand({
 	weight: ["400", "500", "600", "700"],
 });
 
-const ruda = Ruda({
+const nunito = Nunito({
 	subsets: ["cyrillic"],
-	variable: "--font-ruda",
+	variable: "--font-nunito",
 	weight: ["400", "500", "600", "700"],
 });
 
@@ -66,8 +66,8 @@ export default async function LocaleLayout({ children, params }: Props): Promise
 	setRequestLocale(locale);
 
 	return (
-		<html lang={locale} className={locale !== "ru" ? "quicksand" : "ruda"}>
-			<body className={`${locale !== "ru" ? quicksand.variable : ruda.variable} font-sans`}>
+		<html lang={locale} className={locale !== "ru" ? "quicksand" : "nunito"}>
+			<body className={`${locale !== "ru" ? quicksand.variable : nunito.variable} font-sans`}>
 				<NextIntlClientProvider>{children}</NextIntlClientProvider>
 				<SpeedInsights />
 				<Analytics />

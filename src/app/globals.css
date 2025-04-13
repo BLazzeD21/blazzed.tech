@@ -12,20 +12,20 @@
 	--scrollbar-track-color: #b659b3;
 	--scrollbar-thumb-color: var(--pink-color);
 	--font-quicksand: "Quicksand", sans-serif;
-	--font-ruda: "Ruda", sans-serif;
+	--font-nunito: "Nunito", sans-serif;
 }
 
 .quicksand {
 	font-family: var(--font-quicksand) !important;
 }
 
-.ruda {
-	font-family: var(--font-ruda) !important;
+.nunito {
+	font-family: var(--font-nunito) !important;
 }
 
 textarea,
 input {
-	font-family: var(--font-quicksand) var(--font-ruda);
+	font-family: var(--font-quicksand) var(--font-nunito);
 }
 
 * {
