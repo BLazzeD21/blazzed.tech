@@ -68,6 +68,7 @@ export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 		})
 			.then(async (res) => {
 				const response = await res.json();
+
 				if (!res.ok) {
 					throw new Error(response.message || text("submitError"));
 				}

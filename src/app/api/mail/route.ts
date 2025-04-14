@@ -20,7 +20,9 @@ async function getTransporter(): Promise<nodemailer.Transporter> {
 	transporter = nodemailer.createTransport({
 		host: process.env.SMTP_HOST,
 		port: Number(process.env.SMTP_PORT),
+		requireTLS: true,
 		secure: false,
+		logger: true,
 		auth: {
 			user: process.env.SMTP_USERNAME,
 			pass: process.env.SMTP_PASSWORD,
@@ -66,19 +68,20 @@ export async function POST(request: Request): Promise<NextResponse> {
 		const formData = validation.data;
 		const transporter = await getTransporter();
 
-		const date = new Date().toISOString();
+		const date = new Date().toDateString();
 
 		const mailOptions = {
-			from: `"Contact Form ${date}" <${process.env.SMTP_USERNAME}>`,
+			from: `"${escapeHtml(formData.author)}" <${process.env.FROM_EMAIL_USERNAME}>`,
 			to: process.env.TO_EMAIL_USERNAME,
-			subject: `New message from "${escapeHtml(formData.author)}"`,
+			subject: `New message from ${escapeHtml(formData.author)} - ${date}`,
 			text: formData.message,
 			html: generateEmailHtml(formData),
+			date: new Date(),
 		};
 
 		await transporter.sendMail(mailOptions);
 
-		return NextResponse.json({ success: true, message: "Message sent successfully" }, { status: 200 });
+		return NextResponse.json({ success: true, message: `Message sent successfully` }, { status: 200 });
 	} catch (error: unknown) {
 		const errorResponse = {
 			success: false,
