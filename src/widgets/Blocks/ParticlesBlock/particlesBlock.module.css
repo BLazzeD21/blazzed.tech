@@ -6,3 +6,9 @@
 	height: 100vh;
 	background-color: var(--navy-blue-color);
 }
+
+@media (orientation: landscape) and (height <= 764px) {
+	.particles {
+		height: calc(100vh + 50px);
+	}
+}

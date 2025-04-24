@@ -17,6 +17,13 @@
 	align-items: center;
 }
 
+@media (orientation: landscape) and (height <= 764px) {
+	.wrapper {
+		padding-top: 50px;
+		height: calc(100vh) !important;
+	}
+}
+
 @media screen and (width <= 991px) {
 	.wrapper {
 		height: calc(100vh - 200px);
