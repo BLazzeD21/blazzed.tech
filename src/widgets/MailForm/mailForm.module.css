@@ -46,8 +46,14 @@
 }
 
 .textarea {
-	min-height: 150px;
-	resize: vertical;
+	min-height: 200px;
+	resize: none;
+}
+
+.textarea::-webkit-scrollbar-track {
+	background-color: #fff;
+	margin: 16px 0;
+	width: 7px;
 }
 
 .input:focus,
