@@ -2,6 +2,6 @@ import { DetailedHTMLProps, HTMLAttributes } from "react";
 
 import { WorkExperienceType } from "@/types";
 
-export interface ExperienceProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+export interface ExperienceSliderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	workExperience: WorkExperienceType[];
 }

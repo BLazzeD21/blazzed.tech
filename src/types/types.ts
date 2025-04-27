@@ -57,6 +57,21 @@ export interface EducationType {
 	body: string;
 }
 
+export type Tag = {
+	label: string;
+	href: string;
+};
+
+export interface WorkExperienceType {
+	date_start: Date;
+	date_end: Date | null;
+	company: string;
+	role: string;
+	location: string;
+	description: string;
+	tags: Tag[];
+}
+
 export interface InternalLinkType {
 	href: string;
 	name: string;

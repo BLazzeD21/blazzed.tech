@@ -16,6 +16,7 @@ import {
 	skillsList,
 	socialLinks,
 	stack,
+	workExperience,
 } from "@/constants";
 
 type Props = {
@@ -35,7 +36,7 @@ export default function IndexPage({ params }: Props): JSX.Element {
 			<Education higherEducation={higherEducation[locale]} additionalEducation={additionalEducation[locale]} />
 			<Stack ratings={ratings[locale]} stack={stack} />
 			<Portfolio portfolioItems={portfolioItems} />
-			<Experience />
+			<Experience workExperience={workExperience[locale]} />
 			<Mail locale={locale} />
 			<Footer internalLinks={internalLinks[locale]} socialLinks={socialLinks} />
 			<PageUp />

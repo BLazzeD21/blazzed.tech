@@ -3,11 +3,15 @@ import { JSX } from "react";
 
 import styles from "./experience.module.css";
 
+import { ExperienceProps } from "./experience.props";
+
 import { Title } from "@/shared/UI";
+
+import { ExperienceSlider } from "@/widgets";
 
 import { ExperienceWave } from "@/widgets/Waves";
 
-export const Experience = (): JSX.Element => {
+export const Experience = ({ workExperience }: ExperienceProps): JSX.Element => {
 	const text = useTranslations("Experience");
 
 	return (
@@ -22,6 +26,7 @@ export const Experience = (): JSX.Element => {
 						{text("title")}
 					</Title>
 					<div className="divider"></div>
+					<ExperienceSlider workExperience={workExperience} />
 				</div>
 			</div>
 		</section>

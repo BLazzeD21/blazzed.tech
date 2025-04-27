@@ -14,7 +14,7 @@ export default function Error(): JSX.Element {
 				Error
 			</Title>
 			<P size="20">There was an error</P>
-			<LinkButton href="/en" buttonStyle="navyBlue">
+			<LinkButton href="/reload" buttonStyle="navyBlue">
 				Return Home
 			</LinkButton>
 		</div>

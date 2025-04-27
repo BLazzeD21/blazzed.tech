@@ -1,0 +1,91 @@
+.container {
+	color: var(--white-color);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 115px 1fr;
+	gap: 12px;
+}
+
+.block {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 24px;
+	border-radius: 15px;
+	background-color: var(--navy-blue-color);
+}
+
+.experienceBlock {
+	min-height: 330px;
+	grid-column: 1/3;
+}
+
+.row {
+	display: flex;
+	gap: 10px;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.company {
+	width: fit-content;
+	display: inline-block;
+	padding: 5px 12px;
+	border-radius: 20px;
+	background-color: var(--dark-pink-color);
+}
+
+.experience {
+	letter-spacing: 0.5px;
+	margin-top: 8px;
+}
+
+.tags {
+	cursor: default;
+	display: flex;
+	flex-flow: row wrap;
+	gap: 12px;
+	margin-top: auto;
+}
+
+.tag {
+	opacity: 0.9;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	gap: 6px;
+	color: var(--white);
+	text-decoration: none;
+	background-color: var(--gray-color);
+	padding: 6px 10px;
+	border-radius: 20px;
+	font-size: 14px;
+	transition: opacity 0.4s;
+}
+
+.tag:hover {
+	opacity: 0.7;
+}
+
+@media screen and (width <= 767px) {
+	.container {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	.block {
+		gap: 12px;
+	}
+}
+
+@media screen and (width <= 575px) {
+	.tags {
+		gap: 6px;
+	}
+
+	.tag {
+		gap: 6px;
+		padding: 4px 8px;
+		font-size: 12px;
+	}
+}
