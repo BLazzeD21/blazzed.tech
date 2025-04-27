@@ -29,8 +29,8 @@ export const Header = ({ internalLinks, socialLinks }: HeaderProps): JSX.Element
 							{text("title")}
 						</Title>
 						<div className={styles.buttons}>
-							<LinkButton link="#portfolio" buttonStyle="darkPink" scroll>
-								{text("portfolioButton")}
+							<LinkButton link="#experience" buttonStyle="darkPink" scroll>
+								{text("experienceButton")}
 							</LinkButton>
 							<LinkButton link="#about" scroll>
 								{text("aboutMeButton")}

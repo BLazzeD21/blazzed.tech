@@ -35,7 +35,7 @@
 }
 
 .darkPink:hover {
-	color: var(--gray-color);
+	color: var(--navy-blue-color);
 }
 
 @media screen and (width <= 767px) {

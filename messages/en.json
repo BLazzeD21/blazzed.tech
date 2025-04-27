@@ -9,7 +9,7 @@
 	"Header": {
 		"welcome": "My name is Sekerin Alexandr",
 		"title": "I'm developer from Saint-Petersburg",
-		"portfolioButton": "Portfolio",
+		"experienceButton": "Experience",
 		"aboutMeButton": "About me"
 	},
 	"MetaData": {

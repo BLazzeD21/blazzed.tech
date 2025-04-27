@@ -9,7 +9,7 @@
 	"Header": {
 		"welcome": "Меня зовут Секерин Александр",
 		"title": "Я разработчик из Санкт-Петербурга",
-		"portfolioButton": "Портфолио",
+		"experienceButton": "Опыт работы",
 		"aboutMeButton": "Обо мне"
 	},
 	"MetaData": {
