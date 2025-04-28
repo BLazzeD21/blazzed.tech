@@ -85,6 +85,17 @@ canvas {
 	align-items: center;
 }
 
+.swiper-wrapper {
+	align-items: stretch !important;
+	height: 100% !important;
+	border-radius: 15px;
+}
+
+.swiper-slide {
+	height: auto !important;
+	display: flex;
+}
+
 @media screen and (width <= 1280px) {
 	.container {
 		max-width: 960px;

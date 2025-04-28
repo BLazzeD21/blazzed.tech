@@ -14,7 +14,7 @@ import { ExperienceSliderProps } from "./experienceSlider.props";
 
 import { NagivationArrow } from "@/shared/Icons";
 
-import { ExperienceBlock } from "../Blocks";
+import { ExperienceBlock } from "@/widgets/Blocks";
 
 export const ExperienceSlider = ({ workExperience }: ExperienceSliderProps): JSX.Element => {
 	const swiperRef = useRef<SwiperRef>(null);
