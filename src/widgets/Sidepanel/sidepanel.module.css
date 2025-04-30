@@ -39,6 +39,12 @@
 	transform: rotate(-90deg) translate(-40%, -10%);
 }
 
+@media (orientation: landscape) and (height <= 764px) {
+	.sidepanel {
+		top: 50px;
+	}
+}
+
 @media screen and (width <= 1510px) {
 	.sidepanel {
 		left: 10px;

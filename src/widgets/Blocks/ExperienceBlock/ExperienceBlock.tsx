@@ -39,15 +39,17 @@ export const ExperienceBlock = ({ workExperience }: ExperienceBlockProps): JSX.E
 			</div>
 			<div className={classNames(styles.block, styles.experienceBlock)}>
 				<P className={styles.experience}>{workExperience.description}</P>
-				<div className={styles.tags}>
-					{workExperience.tags.map((tag, index) => {
-						return (
-							<Link key={index} href={tag.href} className={styles.tag}>
-								<Image src="/icons/tag.svg" alt={tag.label} width={12} height={12} />
-								{tag.label}
-							</Link>
-						);
-					})}
+				<div className={styles.footer}>
+					<div className={styles.tags}>
+						{workExperience.tags.map((tag, index) => {
+							return (
+								<Link key={index} href={tag.href} className={styles.tag}>
+									<Image src="/icons/tag.svg" alt={tag.label} width={12} height={12} />
+									{tag.label}
+								</Link>
+							);
+						})}
+					</div>
 				</div>
 			</div>
 		</div>
