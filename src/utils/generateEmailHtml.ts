@@ -12,6 +12,7 @@ export const generateEmailHtml = (data: ContactFormData): string => {
         }
       </style>
       <p style="color: #fc85ae; font-size: 24px;"><strong>New Message Received</strong></p>
+      <p style="color: #9e579d;"><strong style="color: #ffffff;">Language:</strong> ${escapeHtml(data.lang)}</p>
       <p style="color: #9e579d;"><strong style="color: #ffffff;">Sender's name:</strong> ${escapeHtml(data.author)}</p>
       <p style="color: #9e579d;"><strong style="color: #ffffff;">Email:</strong> ${escapeHtml(data.address)}</p>
       <div style="background: #574b90; padding: 15px; border-radius: 15px; margin-top:10px; color: #ffffff;">

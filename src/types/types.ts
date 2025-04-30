@@ -89,4 +89,5 @@ export interface ContactFormData {
 	message: string;
 	address: string;
 	recaptchaToken: string;
+	lang: LocaleKeys;
 }

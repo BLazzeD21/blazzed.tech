@@ -12,12 +12,15 @@ import { MailFormProps } from "./mailForm.props";
 
 import { Button } from "@/shared/UI";
 
+import { LocaleKeys } from "@/types";
+
 import { useWindowSize } from "@/hooks";
 
 type FormData = {
 	author: string;
 	message: string;
 	address: string;
+	lang: LocaleKeys;
 };
 
 export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
@@ -63,6 +66,7 @@ export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 			},
 			body: JSON.stringify({
 				...data,
+				lang: locale,
 				recaptchaToken: captchaValue,
 			}),
 		})
