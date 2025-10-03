@@ -10,10 +10,9 @@ export const ExperienceWave = (): JSX.Element => {
 				className={styles.navyBlue}
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 1440 320"
-				transform="scale(1 -1)"
 				preserveAspectRatio="none"
 			>
-				<path d="m0 160 80 21.3c80 21.7 240 63.7 400 37.4C640 192 800 96 960 85.3c160-10.3 320 63.7 400 101.4l80 37.3v96H0Z" />
+				<path d="m1440 160-80-21.3c-80-21.7-240-63.7-400-37.4C800 128 640 224 480 234.7 320 245 160 171 80 133.3L0 96V0h1440z" />
 			</svg>
 		</div>
 	);

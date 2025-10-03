@@ -10,10 +10,9 @@ export const MailWave = (): JSX.Element => {
 				className={styles.darkPink}
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 1440 320"
-				transform="rotate(180)"
 				preserveAspectRatio="none"
 			>
-				<path d="m0 128 60 21.3c60 21.7 180 63.7 300 53.4C480 192 600 128 720 117.3 840 107 960 149 1080 160s240-11 300-21.3l60-10.7v192H0Z" />
+				<path d="M1440,160l-80-21.3c-80-21.7-240-63.7-400-37.4-160,26.7-320,122.7-480,133.4-160,10.3-320-63.7-400-101.4L0,96V0h1440v160Z" />
 			</svg>
 		</div>
 	);
