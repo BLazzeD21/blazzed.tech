@@ -43,7 +43,7 @@ export const ExperienceBlock = ({ workExperience }: ExperienceBlockProps): JSX.E
 					<div className={styles.tags}>
 						{workExperience.tags.map((tag, index) => {
 							return (
-								<Link key={index} href={tag.href} className={styles.tag}>
+								<Link key={index} href={tag.href} className={styles.tag} target="_blank">
 									<Image src="/icons/tag.svg" alt={tag.label} width={12} height={12} />
 									{tag.label}
 								</Link>
