@@ -13,7 +13,10 @@
 		"debug": "cross-env NODE_OPTIONS='--inspect' next dev",
 		"format": "concurrently -p \"[{name}]\" -n \"typescript,prettier,eslint,stylelint\" -c \"cyan.bold,green.bold,red.bold,blue.bold\" \"npm run type\" \"npm run prettier\" \"npm run lint\" \"npm run stylelint\"",
 		"pre-commit": "npm run type && lint-staged",
-		"prepare": "husky"
+		"prepare": "husky",
+		"patch": "npm version patch -m \"version: %s\"",
+		"minor": "npm version minor -m \"version: %s\"",
+		"major": "npm version major -m \"version: %s\""
 	},
 	"dependencies": {
 		"classnames": "^2.5.1",
