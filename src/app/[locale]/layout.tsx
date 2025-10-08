@@ -13,6 +13,8 @@ import { GetMetadata } from "@/config";
 
 import { routing } from "@/i18n/routing";
 
+import { YandexMetrika } from "@/widgets/Yandex";
+
 import { LocaleKeys } from "@/types";
 
 type Props = {
@@ -73,6 +75,7 @@ export default async function LocaleLayout({ children, params }: Props): Promise
 				<NextIntlClientProvider>{children}</NextIntlClientProvider>
 				<SpeedInsights />
 				<Analytics />
+				<YandexMetrika />
 			</body>
 		</html>
 	);
