@@ -6,7 +6,7 @@ type GetMetaDataProps = {
 	name: string;
 	title: string;
 	description: string;
-	domain: string;
+	domain: string | undefined;
 };
 
 export const GetMetadata = ({
@@ -18,7 +18,7 @@ export const GetMetadata = ({
 	domain,
 }: GetMetaDataProps): Metadata => {
 	return {
-		metadataBase: new URL(domain),
+		metadataBase: new URL(domain || ""),
 		applicationName: applicationName,
 		keywords: keywords,
 		authors: { name: name, url: domain },
