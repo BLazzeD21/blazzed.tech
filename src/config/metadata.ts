@@ -6,7 +6,8 @@ type GetMetaDataProps = {
 	name: string;
 	title: string;
 	description: string;
-	domain: string | undefined;
+	baseDomain: string | undefined;
+	vercelDomain: string | undefined;
 };
 
 export const GetMetadata = ({
@@ -15,15 +16,34 @@ export const GetMetadata = ({
 	name,
 	title,
 	description,
-	domain,
+	baseDomain,
+	vercelDomain,
 }: GetMetaDataProps): Metadata => {
+	const domain = vercelDomain || baseDomain || "";
+
 	return {
-		metadataBase: new URL(domain || ""),
+		metadataBase: new URL(domain),
 		applicationName: applicationName,
 		keywords: keywords,
 		authors: { name: name, url: domain },
 		title: title,
 		description: description,
+		alternates: {
+			canonical: baseDomain,
+			languages: {
+				en: `${baseDomain}/en`,
+				ru: `${baseDomain}/ru`,
+				de: `${baseDomain}/de`,
+				fi: `${baseDomain}/fi`,
+				zh: `${baseDomain}/zh`,
+				es: `${baseDomain}/es`,
+				fr: `${baseDomain}/fr`,
+				ar: `${baseDomain}/ar`,
+				pt: `${baseDomain}/pt`,
+				"x-default": baseDomain,
+			},
+		},
+		robots: { index: true, follow: true },
 		icons: {
 			icon: [
 				{ url: "/metadata/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
