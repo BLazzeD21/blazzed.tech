@@ -34,7 +34,7 @@ export const Footer = ({ socialLinks, internalLinks }: FooterProps): JSX.Element
 						</LinkButton>
 						<LinkButton
 							buttonStyle="navyBlue"
-							link={`mailto:sekerin.alexandr@gmail.com?subject=${mailSubject}&body=${mailBody}`}
+							link={`mailto:sekerin.alexandr@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`}
 							target="_blank"
 						>
 							{text("mailButton")}
