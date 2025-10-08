@@ -32,10 +32,9 @@
 	top: 14px;
 }
 
-.location {
+.header .location {
+	font-weight: 100;
 	margin-top: 5px;
-	font-size: 15px;
-	line-height: 18px;
 	color: var(--pink-color);
 }
 
@@ -95,10 +94,5 @@
 		position: absolute;
 		left: 17px;
 		top: 14px;
-	}
-
-	.location {
-		font-size: 12px;
-		line-height: 18px;
 	}
 }

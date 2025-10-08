@@ -16,8 +16,12 @@ export const EducationBlock = ({ imageUrl, name, location, body }: EducationBloc
 				<div className={styles.icon}>
 					<Image src={imageUrl} alt={name} width={25} height={25} />
 				</div>
-				<Title size="16">{name}</Title>
-				<div className={styles.location}>{getLinebBreaks(location, "<br />")}</div>
+				<Title size="16" Tag="h5">
+					{name}
+				</Title>
+				<Title size="15" Tag="h6" className={styles.location}>
+					{getLinebBreaks(location, "<br />")}
+				</Title>
 			</div>
 			<div className={styles.body}>{getLinebBreaks(body, "<br />")}</div>
 		</div>

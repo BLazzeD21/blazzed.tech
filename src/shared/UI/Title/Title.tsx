@@ -6,6 +6,7 @@ import styles from "./Title.module.css";
 import { subTitleProps } from "./title.props";
 
 const sizeClasses = {
+	"15": styles.fz15,
 	"16": styles.fz16,
 	"18": styles.fz18,
 	"20": styles.fz20,
