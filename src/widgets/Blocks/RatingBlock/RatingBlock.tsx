@@ -52,7 +52,7 @@ export const RatingBlock = ({ percentage, name }: RatingBlockProps): JSX.Element
 
 	return (
 		<div className={styles.item}>
-			<Title size="16" navyBlueCircle className={styles.title}>
+			<Title size="16" Tag="h6" navyBlueCircle className={styles.title}>
 				{name}
 			</Title>
 			<P color="white" size="20">
