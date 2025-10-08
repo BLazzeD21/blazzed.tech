@@ -48,6 +48,7 @@ export async function generateMetadata(props: Omit<Props, "children">): Promise<
 	const textAboutMe = await getTranslations({ locale, namespace: "About" });
 
 	return GetMetadata({
+		locale: locale as LocaleKeys,
 		applicationName: text("applicationName"),
 		keywords: text("keywords").split(","),
 		name: text("name"),

@@ -1,6 +1,9 @@
 import { Metadata } from "next";
 
+import { LocaleKeys } from "@/types";
+
 type GetMetaDataProps = {
+	locale: LocaleKeys;
 	applicationName: string;
 	keywords: string[];
 	name: string;
@@ -11,6 +14,7 @@ type GetMetaDataProps = {
 };
 
 export const GetMetadata = ({
+	locale,
 	applicationName,
 	keywords,
 	name,
@@ -77,7 +81,7 @@ export const GetMetadata = ({
 			description: description,
 			images: [
 				{
-					url: "/metadata/metadata.jpg",
+					url: `/metadata/openGraph/${locale}.jpg`,
 					width: 1200,
 					height: 630,
 					alt: title,
@@ -88,7 +92,7 @@ export const GetMetadata = ({
 			card: "summary_large_image",
 			title: title,
 			description: description,
-			images: ["/metadata/metadata.jpg"],
+			images: [`/metadata/openGraph/${locale}.jpg`],
 		},
 		other: {
 			"msapplication-TileColor": "#ffffff",
