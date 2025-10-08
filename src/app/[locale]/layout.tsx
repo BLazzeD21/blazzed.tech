@@ -54,7 +54,7 @@ export async function generateMetadata(props: Omit<Props, "children">): Promise<
 		title: text("pageTitle"),
 		description: textAboutMe("description"),
 		baseDomain: process.env.NEXT_PUBLIC_DOMAIN,
-		vercelDomain: process.env.NEXT_PUBLIC_CANONICAL_DOMAIN,
+		vercelDomain: process.env.NEXT_PUBLIC_VERCEL_DOMAIN,
 	});
 }
 
