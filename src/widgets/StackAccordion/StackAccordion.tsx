@@ -31,7 +31,7 @@ export const StackAccordion = ({ stack }: StackAccordionProps): JSX.Element => {
 				return (
 					<div key={categoryLocale} className={styles.category}>
 						<button className={styles.header} onClick={() => toggleCategory(categoryLocale)}>
-							<h4>{categoryLocale}</h4>
+							<div>{categoryLocale}</div>
 							<span className={classNames(styles.arrow, { [styles.open]: expandedCategory === categoryLocale })}>
 								▼
 							</span>

@@ -7,8 +7,6 @@ import styles from "./stackBlock.module.css";
 
 import { StackBlockProps } from "./stackBlock.props";
 
-import { Title } from "@/shared/UI";
-
 const levelClasses = {
 	Basic: styles.basic,
 	Intermediate: styles.intermediate,
@@ -23,9 +21,7 @@ export const StackBlock = ({ name, imageSrc, level }: StackBlockProps): JSX.Elem
 			<div className={styles.img}>
 				<Image src={imageSrc} alt={name} height={75} width={75} />
 			</div>
-			<Title size="20" Tag="h5" className={styles.name}>
-				{name}
-			</Title>
+			<div className={styles.name}>{name}</div>
 			<div className={classNames(styles.level, levelClasses[level])}>{levels(level)}</div>
 		</div>
 	);

@@ -24,9 +24,12 @@
 }
 
 .name {
-	position: relative;
-	font-weight: 600;
+	font-size: 20px;
 	margin-bottom: 9px;
+	color: var(--white-color);
+	font-weight: 700;
+	position: relative;
+	z-index: 1;
 }
 
 .name::before {
@@ -68,4 +71,10 @@
 
 .basic::before {
 	background-color: rgb(220 114 32);
+}
+
+@media screen and (width <= 1280px) {
+	.name {
+		font-size: 18px;
+	}
 }

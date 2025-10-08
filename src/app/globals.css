@@ -24,7 +24,8 @@
 }
 
 textarea,
-input {
+input,
+button {
 	font-family: var(--font-quicksand) var(--font-nunito);
 }
 
