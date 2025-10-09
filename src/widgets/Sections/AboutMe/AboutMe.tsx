@@ -18,13 +18,15 @@ export const AboutMe = ({ skillsList }: AboutMeProps): JSX.Element => {
 				<div className={styles.wrapper}>
 					<Photo />
 					<div className={styles.description}>
-						<Title navyBlueCircle Tag="h2">
-							{text("label")}
-						</Title>
-						<Title size="48" Tag="h3" className={styles.title}>
-							{text("title")}
-						</Title>
-						<div className="divider"></div>
+						<div className={styles.flex}>
+							<Title navyBlueCircle Tag="h2">
+								{text("label")}
+							</Title>
+							<Title size="48" Tag="h3" className={styles.title}>
+								{text("title")}
+							</Title>
+							<div className="divider"></div>
+						</div>
 						<P className={styles.descriptionText} color="gray" size="24">
 							{text("description")}
 						</P>
