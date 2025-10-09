@@ -13,8 +13,12 @@ const YM_COUNTER_ID = Number(process.env.NEXT_PUBLIC_YANDEX_METRIC_ID);
 export const YandexMetrikaContainer: React.FC<Props> = ({ enabled }) => {
 	const hit = useCallback(
 		(url: string) => {
-			if (enabled) {
-				ym("hit", url);
+			if (enabled && YM_COUNTER_ID) {
+				try {
+					ym("hit", url);
+				} catch (error) {
+					console.warn("Yandex Metrika hit error:", error);
+				}
 			} else {
 				console.log(`%c[YandexMetrika](HIT)`, `color: orange`, url);
 			}
@@ -23,11 +27,25 @@ export const YandexMetrikaContainer: React.FC<Props> = ({ enabled }) => {
 	);
 
 	useEffect(() => {
-		hit(window.location.pathname + window.location.search);
-		Router.events.on("routeChangeComplete", (url: string) => hit(url));
-	}, [hit]);
+		if (!enabled || !YM_COUNTER_ID) return;
 
-	if (!enabled) return null;
+		hit(window.location.pathname + window.location.search);
+
+		const handleRouteChange = (url: string): void => {
+			hit(url);
+		};
+
+		Router.events.on("routeChangeComplete", handleRouteChange);
+
+		return (): void => {
+			Router.events.off("routeChangeComplete", handleRouteChange);
+		};
+	}, [hit, enabled]);
+
+	if (!enabled || !YM_COUNTER_ID) {
+		console.log(`%c[YandexMetrika]`, `color: gray`, "Disabled or no counter ID");
+		return null;
+	}
 
 	return (
 		<YMInitializer
@@ -38,6 +56,8 @@ export const YandexMetrikaContainer: React.FC<Props> = ({ enabled }) => {
 				clickmap: true,
 				trackLinks: true,
 				accurateTrackBounce: true,
+				triggerEvent: true,
+				trackHash: false,
 			}}
 			version="2"
 		/>
