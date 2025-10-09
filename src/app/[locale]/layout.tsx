@@ -13,9 +13,11 @@ import { GetMetadata } from "@/config";
 
 import { routing } from "@/i18n/routing";
 
-import { YandexMetrika } from "@/widgets/Yandex";
+import { YandexMetrikaContainer } from "@/widgets/Yandex";
 
 import { LocaleKeys } from "@/types";
+
+const analyticsEnabled = !!(process.env.NODE_ENV === "production");
 
 type Props = {
 	children: ReactNode;
@@ -75,8 +77,8 @@ export default async function LocaleLayout({ children, params }: Props): Promise
 				<NextIntlClientProvider>{children}</NextIntlClientProvider>
 				<SpeedInsights />
 				<Analytics />
-				<YandexMetrika />
 			</body>
+			<YandexMetrikaContainer enabled={analyticsEnabled} />
 		</html>
 	);
 }

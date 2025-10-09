@@ -1,20 +1,33 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { JSX } from "react";
-import { useEffect } from "react";
+import Router from "next/router";
+import React, { useCallback, useEffect } from "react";
 import ym, { YMInitializer } from "react-yandex-metrika";
+
+type Props = {
+	enabled: boolean;
+};
 
 const YM_COUNTER_ID = Number(process.env.NEXT_PUBLIC_YANDEX_METRIC_ID);
 
-export const YandexMetrika = (): JSX.Element => {
-	const pathname = usePathname();
+export const YandexMetrikaContainer: React.FC<Props> = ({ enabled }) => {
+	const hit = useCallback(
+		(url: string) => {
+			if (enabled) {
+				ym("hit", url);
+			} else {
+				console.log(`%c[YandexMetrika](HIT)`, `color: orange`, url);
+			}
+		},
+		[enabled],
+	);
 
 	useEffect(() => {
-		if (pathname) {
-			ym("hit", pathname);
-		}
-	}, [pathname]);
+		hit(window.location.pathname + window.location.search);
+		Router.events.on("routeChangeComplete", (url: string) => hit(url));
+	}, [hit]);
+
+	if (!enabled) return null;
 
 	return (
 		<YMInitializer
