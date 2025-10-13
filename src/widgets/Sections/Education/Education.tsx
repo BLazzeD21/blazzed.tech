@@ -21,13 +21,13 @@ export const Education = ({ higherEducation, additionalEducation }: EducationPro
 					<Title Tag="h3" size="18" darkPinkCircle isCircleCenter>
 						{educationText("label")}
 					</Title>
-					<Title Tag="h3" size="48" className={styles.title}>
+					<Title Tag="h3" size="48" className={styles.title} isShadow>
 						{educationText("title")}
 					</Title>
 					<div className="divider darkPink"></div>
 					<div className={styles.wrapper}>
 						<div className={styles.column}>
-							<Title size="20" Tag="h4">
+							<Title size="20" Tag="h4" isShadow>
 								{educationText("higherEducation.title")}
 							</Title>
 							<ul>
@@ -44,7 +44,7 @@ export const Education = ({ higherEducation, additionalEducation }: EducationPro
 							</ul>
 						</div>
 						<div className={styles.column}>
-							<Title size="20" Tag="h4">
+							<Title size="20" Tag="h4" isShadow>
 								{educationText("additionalEducation.title")}
 							</Title>
 							<ul>

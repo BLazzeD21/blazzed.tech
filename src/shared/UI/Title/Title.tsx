@@ -23,6 +23,7 @@ export const Title = ({
 	darkPinkCircle = false,
 	navyBlueCircle = false,
 	isCircleCenter = false,
+	isShadow = false,
 	className,
 	Tag = "h2",
 	...props
@@ -34,6 +35,7 @@ export const Title = ({
 				[styles.darkPinkCircle]: darkPinkCircle,
 				[styles.navyBlueCircle]: navyBlueCircle,
 				[styles.center]: isCircleCenter,
+				[styles.isShadow]: isShadow,
 			})}
 			{...props}
 		>

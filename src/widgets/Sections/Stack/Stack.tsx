@@ -22,7 +22,7 @@ export const Stack = ({ ratings, stack }: StackProps): JSX.Element => {
 					<Title Tag="h3" size="18" navyBlueCircle isCircleCenter>
 						{text("label")}
 					</Title>
-					<Title Tag="h3" size="48" className={styles.title}>
+					<Title Tag="h3" size="48" className={styles.title} isShadow>
 						{text("title")}
 					</Title>
 					<div className="divider"></div>

@@ -22,12 +22,12 @@ export const AboutMe = ({ skillsList }: AboutMeProps): JSX.Element => {
 							<Title navyBlueCircle Tag="h2">
 								{text("label")}
 							</Title>
-							<Title size="48" Tag="h3" className={styles.title}>
+							<Title size="48" Tag="h3" className={styles.title} isShadow>
 								{text("title")}
 							</Title>
 							<div className="divider"></div>
 						</div>
-						<P className={styles.descriptionText} color="gray" size="24">
+						<P className={styles.descriptionText} color="white" size="24">
 							{text("description")}
 						</P>
 					</div>

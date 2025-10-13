@@ -14,10 +14,10 @@ export const SkillBlock = ({ title, imageSrc, description }: SkillBlockProps): J
 				<Image src={imageSrc} alt={title} width={30} height={30} />
 			</div>
 			<div>
-				<Title Tag="h3" size="22">
+				<Title Tag="h3" size="22" className={styles.title}>
 					{title}
 				</Title>
-				<P color="gray" size="20" className={styles.description}>
+				<P color="white" size="20" className={styles.description}>
 					{description}
 				</P>
 			</div>

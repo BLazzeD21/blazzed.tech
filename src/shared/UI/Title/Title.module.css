@@ -5,6 +5,10 @@
 	z-index: 1;
 }
 
+.isShadow {
+	text-shadow: 3px 3px 0 var(--gray-color);
+}
+
 .beforeCircle {
 	letter-spacing: 3px;
 	padding-left: 10px;

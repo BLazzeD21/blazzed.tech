@@ -29,6 +29,10 @@
 	margin-top: 10px;
 }
 
+.title {
+	text-shadow: 3px 3px 0 var(--gray-color);
+}
+
 @media screen and (width <= 1280px) {
 	.wrapper {
 		grid-template-columns: 30px 1fr;
