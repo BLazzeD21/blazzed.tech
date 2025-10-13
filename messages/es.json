@@ -8,7 +8,7 @@
 	},
 	"Header": {
 		"welcome": "Mi nombre es Sekerin Alexandr",
-		"title": "Soy desarrollador de San Petersburgo",
+		"title": "Soy <highlight>Software Engineer</highlight>\n de San Petersburgo",
 		"experienceButton": "Experiencia",
 		"aboutMeButton": "Sobre mí"
 	},

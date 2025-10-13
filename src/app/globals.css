@@ -1,7 +1,7 @@
 /* stylelint-disable selector-class-pattern */
 /* stylelint-disable selector-id-pattern */
 :root {
-	--pink-color: #fc85ae;
+	--pink-color: #ffb2cc;
 	--dark-pink-color: #9e579d;
 	--navy-blue-color: #574b90;
 	--gray-color: #303a52;
@@ -13,6 +13,8 @@
 	--scrollbar-thumb-color: var(--pink-color);
 	--font-quicksand: "Quicksand", sans-serif;
 	--font-nunito: "Nunito", sans-serif;
+
+	white-space: pre-line;
 }
 
 .quicksand {

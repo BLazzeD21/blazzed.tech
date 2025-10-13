@@ -7,7 +7,7 @@ import { EducationBlockProps } from "./educationBlock.props";
 
 import { Title } from "@/shared/UI";
 
-import { getLinebBreaks } from "@/utils";
+import { getLineBreaks } from "@/utils";
 
 export const EducationBlock = ({ imageUrl, name, location, body }: EducationBlockProps): JSX.Element => {
 	return (
@@ -20,10 +20,10 @@ export const EducationBlock = ({ imageUrl, name, location, body }: EducationBloc
 					{name}
 				</Title>
 				<Title size="15" Tag="h6" className={styles.location}>
-					{getLinebBreaks(location, "<br />")}
+					{getLineBreaks(location, "<br />")}
 				</Title>
 			</div>
-			<div className={styles.body}>{getLinebBreaks(body, "<br />")}</div>
+			<div className={styles.body}>{getLineBreaks(body, "<br />")}</div>
 		</div>
 	);
 };

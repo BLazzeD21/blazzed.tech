@@ -8,7 +8,7 @@
 	},
 	"Header": {
 		"welcome": "我是亚历山大·谢克林",
-		"title": "我是一名来自圣彼得堡的开发者",
+		"title": "我是一名<highlight>軟體工程師</highlight>\n來自聖彼得堡",
 		"experienceButton": "经验",
 		"aboutMeButton": "关于我"
 	},

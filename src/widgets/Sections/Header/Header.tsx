@@ -15,6 +15,10 @@ import { HeaderWave } from "@/widgets/Waves";
 export const Header = ({ internalLinks, socialLinks }: HeaderProps): JSX.Element => {
 	const text = useTranslations("Header");
 
+	const title = text.rich("title", {
+		highlight: (chunks) => <span className={styles.highlight}>{chunks}</span>,
+	});
+
 	return (
 		<>
 			<Burger internalLinks={internalLinks} socialLinks={socialLinks} />
@@ -26,7 +30,7 @@ export const Header = ({ internalLinks, socialLinks }: HeaderProps): JSX.Element
 							{text("welcome")}
 						</Title>
 						<Title size="72" Tag="h1" className={styles.title}>
-							{text("title")}
+							{title}
 						</Title>
 						<div className={styles.buttons}>
 							<LinkButton link="#experience" buttonStyle="darkPink" scroll>

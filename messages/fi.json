@@ -8,7 +8,7 @@
 	},
 	"Header": {
 		"welcome": "Nimeni on Sekerin Alexandr",
-		"title": "Olen kehittäjä Pietarista",
+		"title": "Olen <highlight>Software Engineer</highlight>\n Pietarista",
 		"experienceButton": "Kokea",
 		"aboutMeButton": "Minusta"
 	},

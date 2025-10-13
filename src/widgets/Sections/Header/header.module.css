@@ -5,7 +5,7 @@
 }
 
 .title {
-	max-width: 835px;
+	max-width: 100%;
 	margin-top: 10px;
 }
 
@@ -15,6 +15,12 @@
 	justify-content: flex-start;
 	gap: 40px;
 	align-items: center;
+}
+
+.highlight {
+	color: var(--pink-color);
+	animation: shadows 2s ease-in-out infinite;
+	text-shadow: 3px 3px 0 var(--gray-color);
 }
 
 @media (orientation: landscape) and (height <= 764px) {
@@ -28,10 +34,6 @@
 	.wrapper {
 		height: calc(100vh - 200px);
 	}
-
-	.title {
-		width: 600px;
-	}
 }
 
 @media screen and (width <= 767px) {
@@ -40,7 +42,6 @@
 	}
 
 	.title {
-		width: 420px;
 		line-height: 50px;
 	}
 }
@@ -48,7 +49,6 @@
 @media screen and (width <= 575px) {
 	.title {
 		margin-top: 12px;
-		width: 300px;
 		line-height: 50px;
 	}
 

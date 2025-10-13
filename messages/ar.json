@@ -8,7 +8,7 @@
 	},
 	"Header": {
 		"welcome": "اسمي سيكيرين ألكسندر",
-		"title": "أنا مطور من سانت بطرسبرغ",
+		"title": "أنا <highlight>مهندس برمجيات</highlight>\n من سانت بطرسبرغ",
 		"experienceButton": "خبرة",
 		"aboutMeButton": "معلومات عني"
 	},
