@@ -7,7 +7,7 @@
 .photo img {
 	object-fit: cover;
 	border-radius: 15px;
-	border: 1px solid #fff;
+	border: 1px solid var(--white-color);
 }
 
 .wrapper {

@@ -5,7 +5,7 @@ export const NagivationArrow = ({ isDisabled, rotate }: { isDisabled: boolean; r
 		<svg width="45" height="45" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 			<path
 				opacity={isDisabled ? "0.5" : "1"}
-				fill={!isDisabled ? "#fc85ae" : "#574b90"}
+				fill={!isDisabled ? "var(--pink-color)" : "var(--navy-blue-color)"}
 				d={
 					rotate
 						? "M9.71 18.293a1 1 0 0 0 1.415 0l4.887-4.893a2 2 0 0 0 0-2.828l-4.89-4.89a1 1 0 0 0-1.415 1.414l4.186 4.185a1 1 0 0 1 0 1.415l-4.182 4.182a1 1 0 0 0 0 1.414"
