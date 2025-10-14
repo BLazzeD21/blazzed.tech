@@ -8,6 +8,10 @@
 	padding: 8px 16px;
 }
 
+.russian {
+	font-family: var(--font-nunito) !important;
+}
+
 .menuItem:hover {
 	background-color: var(--white-color);
 	color: var(--gray-color);

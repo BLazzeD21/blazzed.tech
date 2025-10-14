@@ -1,5 +1,6 @@
 "use client";
 
+import classNames from "classnames";
 import { useParams } from "next/navigation";
 import { JSX } from "react";
 
@@ -31,9 +32,13 @@ export const LocaleSwitcherItem = ({
 		});
 	};
 
+	console.log(locale);
+
 	return (
 		<button
-			className={styles.menuItem}
+			className={classNames(styles.menuItem, {
+				[styles.russian]: locale === "ru",
+			})}
 			onClick={handleClick}
 			disabled={isActive}
 			aria-current={isActive ? "true" : "false"}
