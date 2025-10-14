@@ -7,6 +7,7 @@ import styles from "./experienceBlock.module.css";
 
 import { ExperienceBlockProps } from "./experienceBlock.props";
 
+import { DateIcon, LocationIcon, RoleIcon } from "@/shared/Icons";
 import { P } from "@/shared/UI";
 
 import { refactorDate } from "@/utils";
@@ -23,17 +24,17 @@ export const ExperienceBlock = ({ workExperience }: ExperienceBlockProps): JSX.E
 			<div className={styles.block}>
 				<P className={styles.company}>{workExperience.company}</P>
 				<div className={styles.row}>
-					<Image src="/icons/experience/location.svg" alt={workExperience.location} width={25} height={25} />
+					<LocationIcon />
 					<P className={styles.location}>{workExperience.location}</P>
 				</div>
 			</div>
 			<div className={styles.block}>
 				<div className={styles.row}>
-					<Image src="/icons/experience/role.svg" alt={workExperience.role} width={25} height={25} />
+					<RoleIcon />
 					<P className={styles.role}>{workExperience.role}</P>
 				</div>
 				<div className={styles.row}>
-					<Image src="/icons/experience/date.svg" alt={"Date"} width={25} height={25} />
+					<DateIcon />
 					<P className={styles.date}>{dateText}</P>
 				</div>
 			</div>
