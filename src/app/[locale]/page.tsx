@@ -34,9 +34,9 @@ export default function IndexPage({ params }: Props): JSX.Element {
 			<Header socialLinks={socialLinks} internalLinks={internalLinks[locale]} />
 			<AboutMe skillsList={skillsList[locale]} />
 			<Education higherEducation={higherEducation[locale]} additionalEducation={additionalEducation[locale]} />
-			<Stack ratings={ratings[locale]} stack={stack} />
-			<Portfolio portfolioItems={portfolioItems} />
 			<Experience workExperience={workExperience[locale]} />
+			<Portfolio portfolioItems={portfolioItems} />
+			<Stack ratings={ratings[locale]} stack={stack} />
 			<Mail locale={locale} />
 			<Footer internalLinks={internalLinks[locale]} socialLinks={socialLinks} />
 			<PageUp />
