@@ -208,5 +208,10 @@ export const stack: StackType = {
 			imageSrc: "/icons/stack/swagger.svg",
 			level: Levels.Basic,
 		},
+		{
+			name: "Biome",
+			imageSrc: "/icons/stack/biome.svg",
+			level: Levels.Intermediate,
+		},
 	],
 };
