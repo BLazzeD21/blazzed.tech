@@ -93,3 +93,12 @@ export interface ContactFormData {
 }
 
 export type FormData = Omit<ContactFormData, "cloudflareToken">;
+
+export interface MailOptions {
+	from: string;
+	to: string | undefined;
+	subject: string;
+	text: string;
+	html: string;
+	date: Date;
+}

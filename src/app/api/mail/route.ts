@@ -1,39 +1,8 @@
-import { generateEmailHtml } from "@/utils/generateEmailHtml";
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 
-import { escapeHtml } from "@/utils";
+import { getMailOptions, getTransporter } from "@/config";
 
 import { contactFormSchema } from "@/schemes";
-
-let transporter: nodemailer.Transporter;
-
-async function getTransporter(): Promise<nodemailer.Transporter> {
-	if (transporter && (await transporter.verify())) {
-		return transporter;
-	}
-
-	if (!process.env.SMTP_HOST || !process.env.SMTP_PORT || !process.env.SMTP_USERNAME || !process.env.SMTP_PASSWORD) {
-		throw new Error("SMTP credentials are not configured");
-	}
-
-	transporter = nodemailer.createTransport({
-		host: process.env.SMTP_HOST,
-		port: Number(process.env.SMTP_PORT),
-		requireTLS: true,
-		secure: false,
-		logger: true,
-		auth: {
-			user: process.env.SMTP_USERNAME,
-			pass: process.env.SMTP_PASSWORD,
-		},
-		connectionTimeout: 10000,
-		socketTimeout: 10000,
-		greetingTimeout: 5000,
-	});
-
-	return transporter;
-}
 
 export async function POST(request: Request): Promise<NextResponse> {
 	try {
@@ -61,19 +30,9 @@ export async function POST(request: Request): Promise<NextResponse> {
 			return NextResponse.json({ success: false, message: "Captcha verification failed" }, { status: 400 });
 		}
 
-		const formData = validation.data;
 		const transporter = await getTransporter();
 
-		const date = new Date().toDateString();
-
-		const mailOptions = {
-			from: `"${escapeHtml(formData.author)}" <${process.env.FROM_EMAIL_USERNAME}>`,
-			to: process.env.TO_EMAIL_USERNAME,
-			subject: `New message from ${escapeHtml(formData.author)} - ${date}`,
-			text: formData.message,
-			html: generateEmailHtml(formData),
-			date: new Date(),
-		};
+		const mailOptions = await getMailOptions(validation.data);
 
 		await transporter.sendMail(mailOptions);
 
