@@ -2,9 +2,9 @@
 
 import classNames from "classnames";
 import { useTranslations } from "next-intl";
-import { JSX, useRef, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import { JSX, useState } from "react";
 import { useForm } from "react-hook-form";
+import { Turnstile, useTurnstile } from "react-turnstile";
 
 import styles from "./mailForm.module.css";
 
@@ -12,27 +12,25 @@ import { MailFormProps } from "./mailForm.props";
 
 import { Button } from "@/shared/UI";
 
-import { LocaleKeys } from "@/types";
+import { FormData } from "@/types";
 
 import { useWindowSize } from "@/hooks";
 
-type FormData = {
-	author: string;
-	message: string;
-	address: string;
-	lang: LocaleKeys;
-};
+const siteKey = process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY;
 
 export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 	const text = useTranslations("MailForm");
+
+	const turnstile = useTurnstile();
+
+	const [token, setToken] = useState("");
 
 	const [isPending, setIsPending] = useState<boolean>(false);
 	const [error, setError] = useState<string | null>(null);
 	const [success, setSuccess] = useState<string | null>(null);
 
-	const recaptcha = useRef<ReCAPTCHA>(null);
-
 	const { width } = useWindowSize();
+
 	const {
 		register,
 		handleSubmit,
@@ -46,18 +44,9 @@ export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 	};
 
 	const onSubmit = (data: FormData): void => {
-		if (recaptcha.current === null) return;
-
 		setIsPending(true);
 		setError(null);
 		setSuccess(null);
-
-		const captchaValue = recaptcha.current.getValue();
-
-		if (!captchaValue) {
-			setError(text("captchaError"));
-			return;
-		}
 
 		fetch("/api/mail", {
 			method: "POST",
@@ -67,7 +56,7 @@ export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 			body: JSON.stringify({
 				...data,
 				lang: locale,
-				recaptchaToken: captchaValue,
+				cloudflareToken: token,
 			}),
 		})
 			.then(async (res) => {
@@ -86,12 +75,10 @@ export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 				setError(err.message || text("submitError"));
 			})
 			.finally(() => {
-				recaptcha.current?.reset();
 				setIsPending(false);
+				turnstile.reset();
 			});
 	};
-
-	const siteKey = process.env.NEXT_PUBLIC_CAPTCHA_SECRET_KEY;
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -173,14 +160,14 @@ export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 					{errors.message && <p className={styles.error}>{errors.message.message}</p>}
 				</div>
 			</div>
-			{siteKey && (
+			{siteKey && width && !success && (
 				<div className={styles.reCAPTCHA}>
-					<ReCAPTCHA
-						ref={recaptcha}
+					<Turnstile
+						theme="light"
 						sitekey={siteKey}
-						size={width && width < 340 ? "compact" : "normal"}
-						hl={locale}
-						onExpired={() => recaptcha.current?.reset()}
+						language={locale}
+						onVerify={setToken}
+						size={width < 360 ? "compact" : "normal"}
 					/>
 				</div>
 			)}

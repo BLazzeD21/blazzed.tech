@@ -88,6 +88,8 @@ export interface ContactFormData {
 	author: string;
 	message: string;
 	address: string;
-	recaptchaToken: string;
+	cloudflareToken: string;
 	lang: LocaleKeys;
 }
+
+export type FormData = Omit<ContactFormData, "cloudflareToken">;

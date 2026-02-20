@@ -37,6 +37,7 @@ async function getTransporter(): Promise<nodemailer.Transporter> {
 
 export async function POST(request: Request): Promise<NextResponse> {
 	try {
+		const SECRET_KEY = process.env.CLOUDFLARE_SECRET_KEY;
 		const jsonData = await request.json();
 
 		const validation = contactFormSchema.safeParse(jsonData);
@@ -48,21 +49,16 @@ export async function POST(request: Request): Promise<NextResponse> {
 			);
 		}
 
-		const recaptchaResponse = await fetch(`https://www.google.com/recaptcha/api/siteverify`, {
+		const verifyResponse = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
 			method: "POST",
-			headers: {
-				"Content-Type": "application/x-www-form-urlencoded",
-			},
-			body: new URLSearchParams({
-				secret: process.env.RECAPTCHA_SECRET_KEY || "",
-				response: validation.data.recaptchaToken,
-			}),
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: `secret=${SECRET_KEY}&response=${validation.data.cloudflareToken}`,
 		});
 
-		const recaptchaData = await recaptchaResponse.json();
+		const verifyData = await verifyResponse.json();
 
-		if (!recaptchaData.success || recaptchaData.score < 0.5) {
-			return NextResponse.json({ success: false, message: "reCAPTCHA verification failed" }, { status: 400 });
+		if (!verifyData.success) {
+			return NextResponse.json({ success: false, message: "Captcha verification failed" }, { status: 400 });
 		}
 
 		const formData = validation.data;
