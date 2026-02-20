@@ -81,11 +81,6 @@
 		"contactButton": "Contato",
 		"mailButton": "E-mail",
 		"mailSubject": "Seu Nome - Assunto",
-		"mailBody": "Descrição da sua proposta",
-    "google": "Este site está protegido pelo reCAPTCHA e aplica-se",
-    "policy": "a Política de Privacidade",
-    "terms": "os Termos de Serviço",
-    "and": "e",
-    "apply": "da Google."
+		"mailBody": "Descrição da sua proposta"
 	}
 }
