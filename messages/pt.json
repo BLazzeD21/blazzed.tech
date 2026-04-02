@@ -21,7 +21,7 @@
 	"About": {
 		"label": "Sobre mim",
 		"title": "Sou desenvolvedor",
-		"description": "Olá! Meu nome é Alexander e sou desenvolvedor. Programo desde 2017 e já implementei projetos como sites, bots, aplicativos desktop para Windows e servidores de jogos. Atualmente estou me aprofundando em desenvolvimento web e aprendendo cada vez mais novas tecnologias para me tornar melhor."
+		"description": "Meu nome é Alexander, sou desenvolvedor frontend com experiência comercial e uma ampla base técnica. Desde 2017 desenvolvo software, incluindo aplicações web, soluções desktop, bots e serviços backend. Atualmente me especializo em frontend (React / Next.js) e estou expandindo meus conhecimentos em fullstack e DevOps para compreender melhor a arquitetura e o ciclo de vida das aplicações."
 	},
 	"Education": {
 		"label": "Educação",
@@ -38,7 +38,7 @@
 		"title": "Minhas habilidades"
 	},
 	"StackTitles": {
-		"Databases": "Bancos de dados",
+		"Databases": "Bancos de dados, ORM",
 		"Languages": "Linguagens",
 		"Frameworks, Platforms and Libraries": "Frameworks, Plataformas e Bibliotecas",
 		"Other": "Outros"

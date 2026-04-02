@@ -21,7 +21,7 @@
 	"About": {
 		"label": "Über mich",
 		"title": "Ich bin Entwickler",
-		"description": "Was geht! Mein Name ist Alexander und ich bin Entwickler. Ich programmiere seit 2017 und habe Projekte wie Websites, Bots, Desktop-Anwendungen für Windows und Spielserver umgesetzt. Jetzt vertiefe ich mich in die Webentwicklung und lerne immer mehr neue Technologien, um besser zu werden."
+		"description": "Ich heiße Alexander und bin Frontend-Entwickler mit kommerzieller Erfahrung und breitem technischem Hintergrund. Seit 2017 entwickle ich Software, darunter Webanwendungen, Desktop-Lösungen, Bots und Backend-Services. Derzeit spezialisiere ich mich auf Frontend-Entwicklung (React / Next.js) und erweitere meine Kenntnisse in Richtung Fullstack und DevOps, um Architektur und Lebenszyklus von Anwendungen besser zu verstehen."
 	},
 	"Education": {
 		"label": "Bildung",
@@ -38,7 +38,7 @@
 		"title": "Meine Fähigkeiten"
 	},
 	"StackTitles": {
-		"Databases": "Datenbanken",
+		"Databases": "Datenbanken, ORM",
 		"Languages": "Programmiersprachen",
 		"Frameworks, Platforms and Libraries": "Frameworks, Plattformen und Bibliotheken",
 		"Other": "Andere"

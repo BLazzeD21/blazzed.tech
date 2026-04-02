@@ -3,233 +3,242 @@ import { Locale, SkillsListType } from "@/types";
 export const skillsList: Locale<SkillsListType> = {
 	en: [
 		{
-			title: "Web-development",
+			title: "Web Development",
 			imageSrc: "/icons/skills/web.svg",
 			description:
-				"I'm a front-end web developer with experience in HTML, CSS, Preprocessors, module bundlers, CSS-framework, CSS Architecture (BEM), JS, TS, React, state Containers, SSR, Express, REST API, WebSocket.",
+				"Frontend development of web applications using React and Next.js. Experience with TypeScript, Redux Toolkit (RTK Query), SSR, REST API, and WebSocket. Understanding of architecture and performance optimization.",
 		},
 		{
-			title: "Software Engineering",
+			title: "Software Development",
 			imageSrc: "/icons/skills/software.svg",
 			description:
-				"I have developed WPF and WinForms applications using MySQL and PostgreSQL databases, creating user-friendly and functional data management applications.",
+				"Experience in desktop application development (WPF, WinForms) and backend logic. Working with databases (MySQL, PostgreSQL), API design, and building automation and data processing tools.",
 		},
 		{
-			title: "Multitasking",
+			title: "Engineering Approach",
 			imageSrc: "/icons/skills/multitasking.svg",
 			description:
-				"Experience in project management, refining design mockups, leading teams, and coordinating tasks for effective collaboration.",
-		},
-		{
-			title: "Soft skills",
-			imageSrc: "/icons/skills/soft.svg",
-			description:
-				"My personal qualities include effective time management, developed creative thinking, high communication skills, readiness for cooperation and ease of adaptation.",
-		},
-	],
-	ru: [
-		{
-			title: "Веб-разработка",
-			imageSrc: "/icons/skills/web.svg",
-			description:
-				"Я фронтенд-разработчик с опытом работы с HTML, CSS, препроцессорами, сборщиками модулей, CSS-фреймворками, CSS-архитектурой (BEM), JS, TS, React, state-контейнерами, SSR, Express, REST API, WebSocket.",
-		},
-		{
-			title: "Разработка ПО",
-			imageSrc: "/icons/skills/software.svg",
-			description:
-				"Я разрабатывал приложения WPF и WinForms с использованием баз данных MySQL и PostgreSQL, создавая удобные и функциональные приложения для управления данными.",
-		},
-		{
-			title: "Мультизадачность",
-			imageSrc: "/icons/skills/multitasking.svg",
-			description:
-				"Опыт управления проектами, доработки дизайн-макетов, руководства командами и координации задач для эффективного сотрудничества.",
-		},
-		{
-			title: '"Мягкие" навыки',
-			imageSrc: "/icons/skills/soft.svg",
-			description:
-				"Мои личные качества включают эффективное управление временем, развитое креативное мышление, высокие коммуникативные навыки, готовность к сотрудничеству и легкость адаптации.",
-		},
-	],
-	de: [
-		{
-			title: "Web-Entwicklung",
-			imageSrc: "/icons/skills/web.svg",
-			description:
-				"Ich bin ein Frontend-Webentwickler mit Erfahrung in HTML, CSS, Präprozessoren, Modul-Bundlern, CSS-Frameworks, CSS-Architektur (BEM), JS, TS, React, State-Containern, SSR, Express, REST API und WebSocket.",
-		},
-		{
-			title: "Software-Entwicklung",
-			imageSrc: "/icons/skills/software.svg",
-			description:
-				"Ich habe WPF- und WinForms-Anwendungen mit MySQL- und PostgreSQL-Datenbanken entwickelt und benutzerfreundliche, funktionale Datenverwaltungsanwendungen erstellt.",
-		},
-		{
-			title: "Multitasking",
-			imageSrc: "/icons/skills/multitasking.svg",
-			description:
-				"Erfahrung im Projektmanagement, in der Verfeinerung von Design-Entwürfen, in der Teamführung und in der Koordinierung von Aufgaben für eine effektive Zusammenarbeit.",
+				"Experience across the full development lifecycle: from requirements analysis to implementation and optimization. Participation in architectural decisions, team coordination, and collaboration with clients and designers.",
 		},
 		{
 			title: "Soft Skills",
 			imageSrc: "/icons/skills/soft.svg",
 			description:
-				"Zu meinen persönlichen Eigenschaften gehören effektives Zeitmanagement, ausgeprägtes kreatives Denken, hohe Kommunikationsfähigkeiten, Kooperationsbereitschaft und einfache Anpassungsfähigkeit.",
+				"Strong communication skills, ability to work in a team and take ownership. Fast learner with adaptability, structured thinking, and focus on quality and results.",
 		},
 	],
+
+	ru: [
+		{
+			title: "Веб-разработка",
+			imageSrc: "/icons/skills/web.svg",
+			description:
+				"Frontend-разработка веб-приложений с использованием React и Next.js. Опыт работы с TypeScript, Redux Toolkit (RTK Query), SSR, REST API и WebSocket. Понимание архитектуры и оптимизации производительности.",
+		},
+		{
+			title: "Разработка ПО",
+			imageSrc: "/icons/skills/software.svg",
+			description:
+				"Опыт разработки десктопных приложений (WPF, WinForms) и серверной логики. Работа с базами данных (MySQL, PostgreSQL), проектирование API и создание инструментов для автоматизации и обработки данных.",
+		},
+		{
+			title: "Инженерный подход",
+			imageSrc: "/icons/skills/multitasking.svg",
+			description:
+				"Опыт участия в полном цикле разработки: от анализа требований до реализации и оптимизации. Участвовал в принятии архитектурных решений, координации команды и выстраивании процессов взаимодействия с заказчиком и дизайном.",
+		},
+		{
+			title: "Soft Skills",
+			imageSrc: "/icons/skills/soft.svg",
+			description:
+				"Развитые коммуникативные навыки, умение работать в команде и брать ответственность за результат. Быстрая адаптация к новым технологиям, системное мышление и ориентация на качество и результат.",
+		},
+	],
+
+	de: [
+		{
+			title: "Webentwicklung",
+			imageSrc: "/icons/skills/web.svg",
+			description:
+				"Frontend-Entwicklung von Webanwendungen mit React und Next.js. Erfahrung mit TypeScript, Redux Toolkit (RTK Query), SSR, REST APIs und WebSocket. Verständnis von Architektur und Performance-Optimierung.",
+		},
+		{
+			title: "Softwareentwicklung",
+			imageSrc: "/icons/skills/software.svg",
+			description:
+				"Erfahrung in der Entwicklung von Desktop-Anwendungen (WPF, WinForms) und Backend-Logik. Arbeit mit Datenbanken (MySQL, PostgreSQL), API-Design sowie Automatisierungs- und Datenverarbeitungstools.",
+		},
+		{
+			title: "Ingenieuransatz",
+			imageSrc: "/icons/skills/multitasking.svg",
+			description:
+				"Erfahrung im gesamten Entwicklungszyklus: von der Anforderungsanalyse bis zur Implementierung und Optimierung. Beteiligung an Architekturentscheidungen, Teamkoordination und Zusammenarbeit mit Kunden und Designern.",
+		},
+		{
+			title: "Soft Skills",
+			imageSrc: "/icons/skills/soft.svg",
+			description:
+				"Ausgeprägte Kommunikationsfähigkeiten, Teamarbeit und Verantwortungsbewusstsein. Schnelle Auffassungsgabe, strukturiertes Denken und Fokus auf Qualität und Ergebnisse.",
+		},
+	],
+
 	fi: [
 		{
 			title: "Web-kehitys",
 			imageSrc: "/icons/skills/web.svg",
 			description:
-				"Olen frontend-web-kehittäjä, jolla on kokemusta HTML:stä, CSS:stä, esikäsittelijöistä, moduulipakkaajista, CSS-kehyksistä, CSS-arkkitehtuurista (BEM), JS:stä, TS:stä, Reactista, tilanhallinnasta, SSR:stä, Expressistä, REST API:sta ja WebSocketista.",
+				"Frontend-kehitys web-sovelluksille Reactin ja Next.js:n avulla. Kokemusta TypeScriptistä, Redux Toolkitista (RTK Query), SSR:stä, REST API:sta ja WebSocketista. Ymmärrys arkkitehtuurista ja suorituskyvyn optimoinnista.",
 		},
 		{
 			title: "Ohjelmistokehitys",
 			imageSrc: "/icons/skills/software.svg",
 			description:
-				"Olen kehittänyt WPF- ja WinForms-sovelluksia käyttäen MySQL- ja PostgreSQL-tietokantoja, luoden käyttäjäystävällisiä ja toiminnallisia tietojen hallintasovelluksia.",
+				"Kokemusta työpöytäsovellusten (WPF, WinForms) ja backend-logiikan kehittämisestä. Työskentely tietokantojen (MySQL, PostgreSQL) kanssa, API-suunnittelu sekä automaatio- ja datankäsittelyratkaisut.",
 		},
 		{
-			title: "Monitehtävyys",
+			title: "Insinöörilähestymistapa",
 			imageSrc: "/icons/skills/multitasking.svg",
 			description:
-				"Kokemusta projektien hallinnasta, suunnittelumallien tarkentamisesta, tiimien johtamisesta ja tehtävien koordinoinnista tehokkaan yhteistyön varmistamiseksi.",
+				"Kokemusta koko kehityssyklistä: vaatimusten analyysistä toteutukseen ja optimointiin. Osallistuminen arkkitehtuuripäätöksiin, tiimityöhön ja yhteistyöhön asiakkaiden ja suunnittelijoiden kanssa.",
 		},
 		{
-			title: "Pehmeät taidot",
+			title: "Soft Skills",
 			imageSrc: "/icons/skills/soft.svg",
 			description:
-				"Henkilökohtaisiin ominaisuuksiini kuuluvat tehokas aikahallinta, kehittynyt luova ajattelu, erinomainen viestintätaito, yhteistyöhalu ja helppo sopeutuminen uusiin tilanteisiin.",
+				"Hyvät viestintätaidot, tiimityökyky ja vastuunotto. Nopea oppija, analyyttinen ajattelutapa ja keskittyminen laatuun ja tuloksiin.",
 		},
 	],
+
 	zh: [
 		{
 			title: "Web开发",
 			imageSrc: "/icons/skills/web.svg",
 			description:
-				"我是一名前端开发工程师，熟练掌握HTML、CSS、预处理器、模块打包工具、CSS框架、BEM架构、JavaScript、TypeScript、React状态管理、服务端渲染(SSR)、Express框架、REST API和WebSocket等技术。",
+				"使用 React 和 Next.js 进行前端开发。具备 TypeScript、Redux Toolkit（RTK Query）、SSR、REST API 和 WebSocket 经验。理解应用架构和性能优化。",
 		},
 		{
 			title: "软件开发",
 			imageSrc: "/icons/skills/software.svg",
 			description:
-				"具有WPF和WinForms应用程序开发经验，使用MySQL和PostgreSQL数据库构建用户友好且功能完善的数据管理系统。",
+				"具备桌面应用开发（WPF、WinForms）和后端逻辑经验。熟悉数据库（MySQL、PostgreSQL）、API 设计以及自动化和数据处理工具的开发。",
 		},
 		{
-			title: "多任务处理",
+			title: "工程思维",
 			imageSrc: "/icons/skills/multitasking.svg",
-			description: "擅长项目管理、设计稿优化、团队协作与任务协调，能够高效推进多线程工作。",
+			description: "参与完整开发流程：从需求分析到实现与优化。参与架构决策、团队协作以及与客户和设计师的沟通。",
 		},
 		{
 			title: "软技能",
 			imageSrc: "/icons/skills/soft.svg",
-			description: "具备高效的时间管理能力、创造性思维、出色的沟通技巧、团队协作精神以及快速适应能力。",
+			description: "良好的沟通能力、团队协作能力和责任感。学习能力强，具备结构化思维，注重质量与结果。",
 		},
 	],
+
 	es: [
 		{
 			title: "Desarrollo web",
 			imageSrc: "/icons/skills/web.svg",
 			description:
-				"Soy desarrollador web front-end con experiencia en HTML, CSS, preprocesadores, empaquetadores de módulos, frameworks CSS, arquitectura CSS (BEM), JS, TS, React, gestores de estado, SSR, Express, REST API y WebSocket.",
+				"Desarrollo frontend de aplicaciones web con React y Next.js. Experiencia con TypeScript, Redux Toolkit (RTK Query), SSR, REST API y WebSocket. Comprensión de arquitectura y optimización de rendimiento.",
 		},
 		{
-			title: "Ingeniería de software",
+			title: "Desarrollo de software",
 			imageSrc: "/icons/skills/software.svg",
 			description:
-				"He desarrollado aplicaciones WPF y WinForms utilizando bases de datos MySQL y PostgreSQL, creando aplicaciones de gestión de datos funcionales y fáciles de usar.",
+				"Experiencia en desarrollo de aplicaciones de escritorio (WPF, WinForms) y lógica backend. Trabajo con bases de datos (MySQL, PostgreSQL), diseño de APIs y herramientas de automatización y procesamiento de datos.",
 		},
 		{
-			title: "Multitarea",
+			title: "Enfoque de ingeniería",
 			imageSrc: "/icons/skills/multitasking.svg",
 			description:
-				"Experiencia en gestión de proyectos, refinamiento de maquetas de diseño, liderazgo de equipos y coordinación de tareas para una colaboración efectiva.",
+				"Experiencia en todo el ciclo de desarrollo: desde el análisis de requisitos hasta la implementación y optimización. Participación en decisiones de arquitectura, coordinación de equipos y colaboración con clientes y diseñadores.",
 		},
 		{
-			title: "Habilidades blandas",
+			title: "Soft Skills",
 			imageSrc: "/icons/skills/soft.svg",
 			description:
-				"Mis cualidades personales incluyen gestión efectiva del tiempo, pensamiento creativo desarrollado, altas habilidades comunicativas, disposición para la cooperación y facilidad de adaptación.",
+				"Buenas habilidades de comunicación, trabajo en equipo y responsabilidad. Rápida adaptación, pensamiento estructurado y enfoque en calidad y resultados.",
 		},
 	],
+
 	fr: [
 		{
 			title: "Développement Web",
 			imageSrc: "/icons/skills/web.svg",
 			description:
-				"Je suis développeur front-end avec une expertise en HTML, CSS, préprocesseurs, bundlers de modules, frameworks CSS, architecture CSS (BEM), JS, TS, React, gestion d'état, SSR, Express, API REST et WebSocket.",
+				"Développement frontend d’applications web avec React et Next.js. Expérience avec TypeScript, Redux Toolkit (RTK Query), SSR, API REST et WebSocket. Compréhension de l’architecture et de l’optimisation des performances.",
 		},
 		{
-			title: "Ingénierie Logicielle",
+			title: "Développement logiciel",
 			imageSrc: "/icons/skills/software.svg",
 			description:
-				"J'ai développé des applications WPF et WinForms utilisant des bases de données MySQL et PostgreSQL, créant des solutions ergonomiques et fonctionnelles pour la gestion de données.",
+				"Expérience dans le développement d’applications desktop (WPF, WinForms) et de logique backend. Travail avec des bases de données (MySQL, PostgreSQL), conception d’API et outils d’automatisation.",
 		},
 		{
-			title: "Polyvalence",
+			title: "Approche ingénierie",
 			imageSrc: "/icons/skills/multitasking.svg",
 			description:
-				"Expérience en gestion de projet, amélioration de maquettes, pilotage d'équipes et coordination des tâches pour une collaboration efficace.",
+				"Expérience sur tout le cycle de développement : de l’analyse des besoins à l’implémentation et l’optimisation. Participation aux décisions d’architecture et coordination d’équipe.",
 		},
 		{
-			title: "Savoir-être",
+			title: "Soft Skills",
 			imageSrc: "/icons/skills/soft.svg",
 			description:
-				"Mes qualités personnelles incluent une gestion du temps efficace, une forte créativité, d'excellentes compétences relationnelles, un esprit collaboratif et une grande capacité d'adaptation.",
+				"Excellentes compétences en communication, esprit d’équipe et sens des responsabilités. Adaptabilité rapide, pensée structurée et orientation résultats.",
 		},
 	],
+
 	ar: [
 		{
 			title: "تطوير الويب",
 			imageSrc: "/icons/skills/web.svg",
 			description:
-				"أنا مطور واجهات أمامية بخبرة في HTML، CSS، المعالجات المسبقة، حزم الوحدات، أطر عمل CSS، هندسة CSS (BEM)، JS، TS، React، إدارة الحالة، التقديم من الخادم، Express، واجهات برمجة التطبيقات REST، وWebSocket.",
+				"تطوير واجهات أمامية لتطبيقات الويب باستخدام React وNext.js. خبرة في TypeScript وRedux Toolkit (RTK Query) وSSR وREST API وWebSocket. فهم للهندسة المعمارية وتحسين الأداء.",
 		},
 		{
-			title: "هندسة البرمجيات",
+			title: "تطوير البرمجيات",
 			imageSrc: "/icons/skills/software.svg",
 			description:
-				"قمت بتطوير تطبيقات WPF وWinForms باستخدام قواعد بيانات MySQL وPostgreSQL، وإنشاء تطبيقات سهلة الاستخدام ووظيفية لإدارة البيانات.",
+				"خبرة في تطوير تطبيقات سطح المكتب (WPF وWinForms) ومنطق الخلفية. العمل مع قواعد البيانات (MySQL وPostgreSQL) وتصميم APIs وأدوات الأتمتة.",
 		},
 		{
-			title: "تعدد المهام",
+			title: "المنهج الهندسي",
 			imageSrc: "/icons/skills/multitasking.svg",
-			description: "خبرة في إدارة المشاريع، تحسين نماذج التصميم، قيادة الفرق، وتنسيق المهام للتعاون الفعال.",
+			description:
+				"خبرة في دورة التطوير الكاملة من تحليل المتطلبات إلى التنفيذ والتحسين، مع المشاركة في قرارات الهندسة المعمارية وتنسيق العمل الجماعي.",
 		},
 		{
-			title: "المهارات الناعمة",
+			title: "المهارات الشخصية",
 			imageSrc: "/icons/skills/soft.svg",
 			description:
-				"تشمل صفاتي الشخصية الإدارة الفعالة للوقت، التفكير الإبداعي المتطور، مهارات اتصال عالية، الاستعداد للتعاون وسهولة التكيف.",
+				"مهارات تواصل قوية، العمل ضمن فريق وتحمل المسؤولية. سرعة التعلم، تفكير منظم وتركيز على الجودة والنتائج.",
 		},
 	],
+
 	pt: [
 		{
 			title: "Desenvolvimento Web",
 			imageSrc: "/icons/skills/web.svg",
 			description:
-				"Sou desenvolvedor front-end com experiência em HTML, CSS, pré-processadores, module bundlers, frameworks CSS, arquitetura CSS (BEM), JS, TS, React, gerenciamento de estado, SSR, Express, REST API e WebSocket.",
+				"Desenvolvimento frontend de aplicações web com React e Next.js. Experiência com TypeScript, Redux Toolkit (RTK Query), SSR, REST API e WebSocket. Compreensão de arquitetura e otimização de performance.",
 		},
 		{
-			title: "Engenharia de Software",
+			title: "Desenvolvimento de Software",
 			imageSrc: "/icons/skills/software.svg",
 			description:
-				"Desenvolvi aplicações WPF e WinForms utilizando bancos de dados MySQL e PostgreSQL, criando aplicações funcionais e com boa usabilidade para gestão de dados.",
+				"Experiência no desenvolvimento de aplicações desktop (WPF, WinForms) e lógica backend. Trabalho com bancos de dados (MySQL, PostgreSQL), design de APIs e ferramentas de automação.",
 		},
 		{
-			title: "Multitarefa",
+			title: "Abordagem de engenharia",
 			imageSrc: "/icons/skills/multitasking.svg",
 			description:
-				"Experiência em gestão de projetos, refinamento de mockups, liderança de equipes e coordenação de tarefas para colaboração eficaz.",
+				"Experiência em todo o ciclo de desenvolvimento: da análise de requisitos à implementação e otimização. Participação em decisões arquiteturais e coordenação de equipe.",
 		},
 		{
-			title: "Soft skills",
+			title: "Soft Skills",
 			imageSrc: "/icons/skills/soft.svg",
 			description:
-				"Minhas qualidades incluem gestão eficaz de tempo, pensamento criativo desenvolvido, altas habilidades de comunicação, prontidão para cooperação e facilidade de adaptação.",
+				"Boas habilidades de comunicação, trabalho em equipe e responsabilidade. Rápida adaptação, pensamento estruturado e foco em qualidade e resultados.",
 		},
 	],
 };

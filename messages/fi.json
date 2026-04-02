@@ -21,7 +21,7 @@
 	"About": {
 		"label": "Minusta",
 		"title": "Olen kehittäjä",
-		"description": "Mitä kuuluu! Nimeni on Alexander ja olen kehittäjä. Olen ohjelmoinut vuodesta 2017 lähtien ja toteuttanut projekteja kuten verkkosivustoja, bottia, Windowsin työpäätesovelluksia ja pelipalvelimia. Nyt syvennyn web-kehitykseen ja opiskelen yhä uusia teknologioita tullakseni paremmaksi."
+		"description": "Nimeni on Alexander, olen frontend-kehittäjä, jolla on kaupallista kokemusta ja laaja tekninen tausta. Olen kehittänyt ohjelmistoja vuodesta 2017 lähtien, mukaan lukien web-sovelluksia, työpöytäsovelluksia, botteja ja backend-palveluita. Tällä hetkellä erikoistun frontend-kehitykseen (React / Next.js) ja laajennan osaamistani fullstack- ja DevOps-suuntiin ymmärtääkseni paremmin sovellusten arkkitehtuuria ja elinkaarta."
 	},
 	"Education": {
 		"label": "Koulutus",
@@ -38,7 +38,7 @@
 		"title": "Osaamiseni"
 	},
 	"StackTitles": {
-		"Databases": "Tietokannat",
+		"Databases": "Tietokannat, ORM",
 		"Languages": "Ohjelmointikielet",
 		"Frameworks, Platforms and Libraries": "Kehykset, alustat ja kirjastot",
 		"Other": "Muut"

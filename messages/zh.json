@@ -21,7 +21,7 @@
 	"About": {
 		"label": "关于我",
 		"title": "我是开发者",
-		"description": "你好！我是亚历山大，一名开发者。自2017年开始编程，已完成网站、机器人、Windows桌面应用程序和游戏服务器等项目。目前正深入钻研Web开发，持续学习新技术以不断提升自己。"
+		"description": "我叫Alexander，是一名前端开发工程师，拥有商业开发经验和广泛的技术背景。自2017年以来，我一直从事软件开发，包括Web应用、桌面应用、机器人以及后端服务。目前我专注于前端开发（React / Next.js），同时向全栈和DevOps方向发展，以更深入理解应用架构和生命周期。"
 	},
 	"Education": {
 		"label": "教育背景",
@@ -38,7 +38,7 @@
 		"title": "我的技能"
 	},
 	"StackTitles": {
-		"Databases": "数据库",
+		"Databases": "数据库，ORM",
 		"Languages": "编程语言",
 		"Frameworks, Platforms and Libraries": "框架、平台与库",
 		"Other": "其他"
