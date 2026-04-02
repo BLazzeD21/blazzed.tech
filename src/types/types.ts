@@ -68,7 +68,7 @@ export interface WorkExperienceType {
 	company: string;
 	role: string;
 	location: string;
-	description: string;
+	description: string[];
 	tags: Tag[];
 }
 

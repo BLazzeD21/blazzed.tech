@@ -35,6 +35,7 @@
 }
 
 .experience {
+	position: relative;
 	letter-spacing: 0.5px;
 	margin-top: 8px;
 }
@@ -68,6 +69,25 @@
 
 .tag:hover {
 	opacity: 0.7;
+}
+
+.experience li {
+	position: relative;
+	list-style-type: none;
+	font-size: 16px;
+	padding-left: 15px;
+	margin-bottom: 5px;
+}
+
+.experience li::before {
+	position: absolute;
+	content: "";
+	top: 8px;
+	left: 0;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--pink-color);
 }
 
 @media screen and (width <= 767px) {
