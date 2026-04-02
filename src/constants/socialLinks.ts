@@ -12,12 +12,6 @@ export const socialLinks = [
 		contactsIcon: "/icons/footer/vk.svg",
 	},
 	{
-		link: "https://www.instagram.com/sekerin21",
-		name: "instagram",
-		asideIcon: "/icons/social/instagram.svg",
-		contactsIcon: "/icons/footer/instagram.svg",
-	},
-	{
 		link: "https://t.me/BlazzeD21",
 		name: "telegram",
 		asideIcon: "/icons/social/telegram.svg",
@@ -28,11 +22,5 @@ export const socialLinks = [
 		name: "linkedin",
 		asideIcon: "/icons/social/linkedin.svg",
 		contactsIcon: "/icons/footer/linkedin.svg",
-	},
-	{
-		link: "https://x.com/blazzed21",
-		name: "x",
-		asideIcon: "/icons/social/x.svg",
-		contactsIcon: "/icons/footer/x.svg",
 	},
 ];
