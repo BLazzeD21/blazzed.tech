@@ -27,6 +27,16 @@ export const stack: StackType = {
 			imageSrc: "/icons/stack/redis.svg",
 			level: Levels.Basic,
 		},
+		{
+			name: "MySQL",
+			imageSrc: "/icons/stack/mysql.svg",
+			level: Levels.Intermediate,
+		},
+		{
+			name: "Sequelize",
+			imageSrc: "/icons/stack/sequelize.svg",
+			level: Levels.Intermediate,
+		},
 	],
 	Languages: [
 		{
@@ -196,6 +206,11 @@ export const stack: StackType = {
 		{
 			name: "Playwright",
 			imageSrc: "/icons/stack/playwright.svg",
+			level: Levels.Basic,
+		},
+		{
+			name: "Jest",
+			imageSrc: "/icons/stack/jest.svg",
 			level: Levels.Basic,
 		},
 		{
