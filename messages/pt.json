@@ -69,7 +69,9 @@
 		"submitError": "Ocorreu um erro ao enviar",
 		"submitSuccess": "Mensagem enviada com sucesso!",
 		"sending": "Enviando...",
-		"sendButton": "Enviar"
+		"sendButton": "Enviar",
+		"consentLabel": "Concordo com o tratamento dos meus dados pessoais",
+		"consentRequired": "É necessário o consentimento para enviar a mensagem"
 	},
 	"Experience": {
 		"label": "Experiência",

@@ -54,8 +54,8 @@
 		"soon": "pronto"
 	},
 	"Mail": {
-      "label": "Formulario de contacto",
-      "title": "Formulario de retroalimentación"
+		"label": "Formulario de contacto",
+		"title": "Formulario de retroalimentación"
 	},
 	"MailForm": {
 		"nameLabel": "Tu nombre",
@@ -69,11 +69,13 @@
 		"submitError": "Ocurrió un error al enviar",
 		"submitSuccess": "¡Mensaje enviado con éxito!",
 		"sending": "Enviando...",
-		"sendButton": "Enviar"
+		"sendButton": "Enviar",
+		"consentLabel": "Doy mi consentimiento para el tratamiento de mis datos personales",
+		"consentRequired": "Se requiere el consentimiento para enviar el mensaje"
 	},
 	"Experience": {
-      "label": "Experiencia",
-      "title": "Mi experiencia laboral"
+		"label": "Experiencia",
+		"title": "Mi experiencia laboral"
 	},
 	"Footer": {
 		"quote": "Viviendo, aprendiendo y mejorando un día a la vez.",

@@ -88,6 +88,7 @@ export interface ContactFormData {
 	author: string;
 	message: string;
 	address: string;
+	consent: boolean;
 	cloudflareToken: string;
 	lang: LocaleKeys;
 }

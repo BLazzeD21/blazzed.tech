@@ -58,22 +58,24 @@
 		"title": "Feedback form"
 	},
 	"MailForm": {
-			"nameLabel": "Your name",
-			"emailLabel": "Email",
-			"messageLabel": "Message or offer",
-			"requiredField": "This field is required",
-			"minLength": "Minimum {value} characters",
-			"maxLength": "Maximum {value} characters",
-			"invalidEmail": "Invalid email address",
-			"captchaError": "Please verify the reCAPTCHA!",
-			"submitError": "An error occurred while submitting",
-			"submitSuccess": "Message sent successfully!",
-			"sending": "Sending...",
-			"sendButton": "Send"
-		},
+		"nameLabel": "Your name",
+		"emailLabel": "Email",
+		"messageLabel": "Message or offer",
+		"requiredField": "This field is required",
+		"minLength": "Minimum {value} characters",
+		"maxLength": "Maximum {value} characters",
+		"invalidEmail": "Invalid email address",
+		"captchaError": "Please verify the reCAPTCHA!",
+		"submitError": "An error occurred while submitting",
+		"submitSuccess": "Message sent successfully!",
+		"sending": "Sending...",
+		"sendButton": "Send",
+		"consentLabel": "I consent to the processing of my personal data",
+		"consentRequired": "Consent is required to send the message"
+	},
 	"Experience": {
-      "label": "Experience",
-      "title": "My work experience"
+		"label": "Experience",
+		"title": "My work experience"
 	},
 	"Footer": {
 		"quote": "Living, learning, & leveling up one day at a time.",

@@ -160,6 +160,23 @@ export const MailForm = ({ locale }: MailFormProps): JSX.Element => {
 					{errors.message && <p className={styles.error}>{errors.message.message}</p>}
 				</div>
 			</div>
+
+			<div className={styles.consentGroup}>
+				<label htmlFor="consent" className={styles.consentLabel}>
+					<input
+						id="consent"
+						type="checkbox"
+						{...register("consent", {
+							required: text("consentRequired"),
+							onChange: handleChange,
+						})}
+						className={styles.checkbox}
+						disabled={isPending}
+					/>
+					<span>{text("consentLabel")}</span>
+				</label>
+				{errors.consent && <p className={styles.error}>{errors.consent.message}</p>}
+			</div>
 			{siteKey && width && !success && (
 				<div className={styles.reCAPTCHA}>
 					<Turnstile
