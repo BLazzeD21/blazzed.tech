@@ -22,7 +22,7 @@ export const GetMetadata = ({
 	domain = "",
 }: GetMetaDataProps): Metadata => {
 	return {
-		metadataBase: new URL(domain),
+		metadataBase: domain ? new URL(domain) : null,
 		applicationName: applicationName,
 		keywords: keywords,
 		authors: { name: name, url: domain },

@@ -19,6 +19,8 @@ import { LocaleKeys } from "@/types";
 
 const analyticsEnabled = !!(process.env.NODE_ENV === "production");
 
+const domain = process.env.NEXT_PUBLIC_DOMAIN || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
+
 type Props = {
 	children: ReactNode;
 	params: Promise<{ locale: Locale }>;
@@ -58,7 +60,7 @@ export async function generateMetadata(props: Omit<Props, "children">): Promise<
 		name: text("name"),
 		title: text("pageTitle"),
 		description: textAboutMe("description"),
-		domain: process.env.NEXT_PUBLIC_DOMAIN,
+		domain: domain,
 	});
 }
 
