@@ -8,7 +8,6 @@ const intlMiddleware = createIntlMiddleware(routing);
 
 const allowedOrigins = [
 	process.env.VERCEL_URL && `https://${process.env.VERCEL_URL}`, // Автоматическое определение Vercel URL
-	process.env.NEXT_PUBLIC_VERCEL_URL && `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`,
 	process.env.NEXT_PUBLIC_DOMAIN,
 	"https://localhost",
 	"https://localhost:5500",

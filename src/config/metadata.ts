@@ -9,8 +9,7 @@ type GetMetaDataProps = {
 	name: string;
 	title: string;
 	description: string;
-	baseDomain: string | undefined;
-	vercelDomain: string | undefined;
+	domain: string | undefined;
 };
 
 export const GetMetadata = ({
@@ -20,11 +19,8 @@ export const GetMetadata = ({
 	name,
 	title,
 	description,
-	baseDomain,
-	vercelDomain,
+	domain = "",
 }: GetMetaDataProps): Metadata => {
-	const domain = vercelDomain || baseDomain || "";
-
 	return {
 		metadataBase: new URL(domain),
 		applicationName: applicationName,
@@ -33,7 +29,7 @@ export const GetMetadata = ({
 		title: title,
 		description: description,
 		alternates: {
-			canonical: baseDomain,
+			canonical: domain,
 			languages: {
 				en: "/en",
 				ru: "/ru",
@@ -44,7 +40,7 @@ export const GetMetadata = ({
 				fr: "/fr",
 				ar: "/ar",
 				pt: "/pt",
-				"x-default": baseDomain,
+				"x-default": domain,
 			},
 		},
 		robots: { index: true, follow: true },
